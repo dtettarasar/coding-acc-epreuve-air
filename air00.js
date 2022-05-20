@@ -15,12 +15,27 @@ const argTester = () => {
     return args[0];
 }
 
+const mySplit = (str) => {
+
+    const pattern = /\S/m;
+
+    const mainArr = [];
+
+    for (let i = 0; i < str.length; i++) {
+
+        if (pattern.test(str[i])) {
+            console.log(str[i]);
+        }
+    }
+
+}
+
 const main = () => {
 
     const str = argTester();
 
     if (str) {
-        console.log(str);
+        mySplit(str);
     }
 
 }
