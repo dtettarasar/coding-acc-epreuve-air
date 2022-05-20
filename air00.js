@@ -8,9 +8,21 @@ const argTester = () => {
         console.log("Veuillez passer une seule chaîne de caractère en argument");
         console.log("Exemple : node air00.js 'Fear Of The Dark'");
 
+        return false;
+
     }
 
-    console.log(args);
+    return args[0];
 }
 
-argTester();
+const main = () => {
+
+    const str = argTester();
+
+    if (str) {
+        console.log(str);
+    }
+
+}
+
+main();
