@@ -48,7 +48,12 @@ const main = () => {
     const str = argTester();
 
     if (str) {
-        mySplit(str);
+        const strArr = mySplit(str);
+
+        for (let i = 0; i < strArr.length; i++ ) {
+            console.log(strArr[i]);
+        }
+
     }
 
 }
