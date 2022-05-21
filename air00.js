@@ -32,7 +32,7 @@ const mySplit = (str) => {
         if (pattern.test(str[i])) {
             subArr.push(str[i]);
         } else if (!pattern.test(str[i]) && subArr.length !== 0){
-            mainArr.push(subArr);
+            mainArr.push(subArr.join(""));
             subArr = [];
         }
         
@@ -40,7 +40,7 @@ const mySplit = (str) => {
     }
 
     // Push le dernier élément généré par la boucle
-    mainArr.push(subArr);
+    mainArr.push(subArr.join(""));
     console.log(mainArr);
 
 }
