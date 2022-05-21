@@ -15,6 +15,10 @@ const argTester = () => {
     return args;
 }
 
+const mySplit = (str, separator) => {
+
+}
+
 const main = () => {
 
     const str = argTester();
