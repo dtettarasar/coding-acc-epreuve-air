@@ -17,16 +17,31 @@ const argTester = () => {
 
 const mySplit = (str) => {
 
+    // Matcher les chars qui ne correspondent pas à des séparateurs
     const pattern = /\S/m;
 
     const mainArr = [];
+    let subArr = [];
 
+    // Boucle pour isoler les chars de chaque éléments de la string à découper
     for (let i = 0; i < str.length; i++) {
 
+        console.log(str[i] + ": " + pattern.test(str[i]));
+
+        
         if (pattern.test(str[i])) {
-            console.log(str[i]);
+            subArr.push(str[i]);
+        } else if (!pattern.test(str[i]) && subArr.length !== 0){
+            mainArr.push(subArr);
+            subArr = [];
         }
+        
+        
     }
+
+    // Push le dernier élément généré par la boucle
+    mainArr.push(subArr);
+    console.log(mainArr);
 
 }
 
