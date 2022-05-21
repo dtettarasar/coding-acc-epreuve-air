@@ -26,9 +26,6 @@ const mySplit = (str) => {
     // Boucle pour isoler les chars de chaque éléments de la string à découper
     for (let i = 0; i < str.length; i++) {
 
-        console.log(str[i] + ": " + pattern.test(str[i]));
-
-        
         if (pattern.test(str[i])) {
             subArr.push(str[i]);
         } else if (!pattern.test(str[i]) && subArr.length !== 0){
@@ -41,7 +38,8 @@ const mySplit = (str) => {
 
     // Push le dernier élément généré par la boucle
     mainArr.push(subArr.join(""));
-    console.log(mainArr);
+
+    return mainArr;
 
 }
 
