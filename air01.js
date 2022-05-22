@@ -81,6 +81,18 @@ const findSepIndexes = (obj) => {
 
 }
 
+const getStrExtract = (str, indStart, indEnd) => {
+
+    const extractArr = [];
+
+    for (let i = indStart; i < indEnd; i++) {
+        extractArr.push(str[i]);
+    }
+
+    console.log(extractArr);
+
+}
+
 const mySplit = (str) => {
 
     const sepInd = findSepIndexes(str);
@@ -99,3 +111,4 @@ const main = () => {
 }
 
 main();
+
