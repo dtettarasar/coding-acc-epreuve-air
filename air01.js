@@ -15,10 +15,53 @@ const argTester = () => {
 
     }
 
-    strObj.strValue = args[0];
+    strObj.mainStrValue = args[0];
     strObj.separator = args[1];
 
     return strObj;
+}
+
+const arrComparison = (arrOne, arrTwo) => {
+
+    if (arrOne.length === arrTwo.length) {
+
+        for (let i = 0; i < arrOne.length; i++) {
+
+            if (arrOne[i] !== arrTwo[i]) {
+                return false;
+            }
+
+        }
+
+        return true;
+    }
+}
+
+const strInStr = (obj) => {
+
+    const fullStrArr = obj.mainStrValue.split('');
+    const sampleStrArr = obj.separator.split('');
+
+    for (let i = 0; i < fullStrArr.length;i++) {
+
+        if (fullStrArr[i] === sampleStrArr[0]) {
+
+            const fullStrExtract = [];
+
+            for (let j = 0; j < sampleStrArr.length; j++) {
+
+                fullStrExtract.push(fullStrArr[i + j]);
+
+            }
+
+            console.log(arrComparison(fullStrExtract, sampleStrArr));
+
+        }
+
+    }
+
+    return false;
+
 }
 
 const mySplit = (str, separator) => {
@@ -30,7 +73,7 @@ const main = () => {
     const str = argTester();
 
     if (str) {
-        console.log(str);
+        console.log(strInStr(str));
     }
 
 }
