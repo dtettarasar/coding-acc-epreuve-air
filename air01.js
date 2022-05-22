@@ -37,7 +37,7 @@ const arrComparison = (arrOne, arrTwo) => {
     }
 }
 
-const strInStr = (obj) => {
+const findIndexes = (obj) => {
 
     const fullStrArr = obj.mainStrValue.split('');
     const sampleStrArr = obj.separator.split('');
@@ -80,7 +80,7 @@ const main = () => {
     const str = argTester();
 
     if (str) {
-        console.log(strInStr(str));
+        findIndexes(str)
     }
 
 }
