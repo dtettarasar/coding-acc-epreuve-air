@@ -56,6 +56,13 @@ const strInStr = (obj) => {
 
             console.log(arrComparison(fullStrExtract, sampleStrArr));
 
+            if (arrComparison(fullStrExtract, sampleStrArr)) {
+
+              console.log("indStart: " + i);
+              console.log("indEnd: " + ( i + sampleStrArr.length));
+
+            }
+
         }
 
     }
