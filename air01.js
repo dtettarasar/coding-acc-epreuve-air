@@ -93,11 +93,22 @@ const getStrExtract = (str, indStart, indEnd) => {
 
 }
 
-const mySplit = (str) => {
+const mySplit = (strObj) => {
 
-    const sepInd = findSepIndexes(str);
+    const sepInd = findSepIndexes(strObj);
+    const strVal = strObj.mainStrValue;
+    let indexStr = 0
+
     console.log(sepInd);
 
+    for (let i = 0; i < sepInd.length; i++) {
+
+        getStrExtract(strVal, indexStr, sepInd[i].indStart);
+        indexStr = sepInd[i].indEnd + 1;
+        console.log("indexStr:" + indexStr);
+        console.log("i: " + i);
+
+    }
 }
 
 const main = () => {
