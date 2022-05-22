@@ -37,29 +37,35 @@ const arrComparison = (arrOne, arrTwo) => {
     }
 }
 
-const findIndexes = (obj) => {
+// rechercher chaque endroit dans la str où l'on retrouve le séparateur
+const findSepIndexes = (obj) => {
 
     const fullStrArr = obj.mainStrValue.split('');
-    const sampleStrArr = obj.separator.split('');
+    const sepStrArr = obj.separator.split('');
+
+    const indArr = [];
 
     for (let i = 0; i < fullStrArr.length;i++) {
 
-        if (fullStrArr[i] === sampleStrArr[0]) {
+        if (fullStrArr[i] === sepStrArr[0]) {
 
             const fullStrExtract = [];
 
-            for (let j = 0; j < sampleStrArr.length; j++) {
+            for (let j = 0; j < sepStrArr.length; j++) {
 
                 fullStrExtract.push(fullStrArr[i + j]);
 
             }
 
-            console.log(arrComparison(fullStrExtract, sampleStrArr));
+            if (arrComparison(fullStrExtract, sepStrArr)) {
 
-            if (arrComparison(fullStrExtract, sampleStrArr)) {
+              //objet qui va stocker les index où le séparateur a été identifié dans la str
+              const sepInd = {};
 
-              console.log("indStart: " + i);
-              console.log("indEnd: " + ( i + sampleStrArr.length));
+              sepInd.indStart = i;
+              sepInd.indEnd = i + sepStrArr.length - 1;
+
+              indArr.push(sepInd);
 
             }
 
@@ -67,11 +73,18 @@ const findIndexes = (obj) => {
 
     }
 
+    if (indArr.length !== 0) {
+        return indArr;
+    }
+
     return false;
 
 }
 
-const mySplit = (str, separator) => {
+const mySplit = (str) => {
+
+    const sepInd = findSepIndexes(str);
+    console.log(sepInd);
 
 }
 
@@ -80,7 +93,7 @@ const main = () => {
     const str = argTester();
 
     if (str) {
-        findIndexes(str)
+        mySplit(str);
     }
 
 }
