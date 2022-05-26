@@ -98,26 +98,24 @@ const mySplit = (strObj) => {
 
     const sepInd = findSepIndexes(strObj);
     const strVal = strObj.mainStrValue;
-    let indexStr = 0
-
-    console.log(sepInd);
+    let indexStr = 0;
+    const mainArr = [];
 
     for (let i = 0; i < sepInd.length; i++) {
 
         const strExtract = getStrExtract(strVal, indexStr, sepInd[i].indStart);
-        console.log(strExtract);
         indexStr = sepInd[i].indEnd + 1;
-        console.log("indexStr:" + indexStr);
-        console.log("i: " + i);
+        mainArr.push(strExtract);
 
     }
 
     // check s'il reste des char à récupérer après le dernier séparateur
     if (sepInd[sepInd.length - 1].indEnd < strVal.length -1) {
-        console.log("str doesnt end with sep");
         const strExtract = getStrExtract(strVal, sepInd[sepInd.length - 1].indEnd + 1, strVal.length);
-        console.log(strExtract);
+        mainArr.push(strExtract);
     }
+
+    console.log(mainArr);
 
 }
 
