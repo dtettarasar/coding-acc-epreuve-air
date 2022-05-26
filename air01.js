@@ -115,7 +115,7 @@ const mySplit = (strObj) => {
         mainArr.push(strExtract);
     }
 
-    console.log(mainArr);
+    return mainArr;
 
 }
 
@@ -124,7 +124,7 @@ const main = () => {
     const str = argTester();
 
     if (str) {
-        mySplit(str);
+        console.log(mySplit(str));
     }
 
 }
