@@ -94,6 +94,7 @@ const getStrExtract = (str, indStart, indEnd) => {
 
 }
 
+// fonction qui va diviser une string en focntion d'un séparateur
 const mySplit = (strObj) => {
 
     const sepInd = findSepIndexes(strObj);
@@ -124,7 +125,12 @@ const main = () => {
     const str = argTester();
 
     if (str) {
-        console.log(mySplit(str));
+        const strSplit = mySplit(str);
+
+        for (let i = 0; i < strSplit.length; i++) {
+            console.log(strSplit[i].join(''));
+        }
+
     }
 
 }
