@@ -40,8 +40,9 @@ const arrComparison = (arrOne, arrTwo) => {
 // rechercher chaque endroit dans la str où l'on retrouve le séparateur
 const findSepIndexes = (fullStr, sepStr) => {
 
-    const fullStrArr = fullStr.split('');
+    //const fullStrArr = fullStr.split('');
     const sepStrArr = sepStr.split('');
+    const fullStrArr = fullStr.split('');
 
     const indArr = [];
 
@@ -95,10 +96,11 @@ const getStrExtract = (str, indStart, indEnd) => {
 }
 
 // fonction qui va diviser une string en focntion d'un séparateur
-const mySplit = (strObj, fullStr, separator) => {
-
-    const sepInd = findSepIndexes(fullStr, separator);
+const mySplit = (fullStr, separator) => {
+    
     const strVal = fullStr;
+    const sepVal = separator;
+    const sepInd = findSepIndexes(strVal, sepVal);
     let indexStr = 0;
     const mainArr = [];
 
@@ -129,7 +131,7 @@ const main = () => {
         const fullStr = strObj.mainStrValue;
         const sepVal = strObj.separator;
 
-        const strSplit = mySplit(strObj, fullStr, sepVal);
+        const strSplit = mySplit(fullStr, sepVal);
 
         for (let i = 0; i < strSplit.length; i++) {
             console.log(strSplit[i].join(''));
