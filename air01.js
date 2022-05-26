@@ -81,6 +81,7 @@ const findSepIndexes = (obj) => {
 
 }
 
+// récupérer un extract d'une string en fonction d'un indice de début et un indice de départ
 const getStrExtract = (str, indStart, indEnd) => {
 
     const extractArr = [];
@@ -109,6 +110,13 @@ const mySplit = (strObj) => {
         console.log("i: " + i);
 
     }
+
+    // check s'il reste des char à récupérer après le dernier séparateur
+    if (sepInd[sepInd.length - 1].indEnd < strVal.length -1) {
+        console.log("str doesnt end with sep");
+        getStrExtract(strVal, sepInd[sepInd.length - 1].indEnd + 1, strVal.length);
+    }
+
 }
 
 const main = () => {
@@ -122,4 +130,3 @@ const main = () => {
 }
 
 main();
-
