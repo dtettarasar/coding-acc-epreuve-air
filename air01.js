@@ -90,7 +90,7 @@ const getStrExtract = (str, indStart, indEnd) => {
         extractArr.push(str[i]);
     }
 
-    console.log(extractArr);
+    return extractArr;
 
 }
 
@@ -104,7 +104,8 @@ const mySplit = (strObj) => {
 
     for (let i = 0; i < sepInd.length; i++) {
 
-        getStrExtract(strVal, indexStr, sepInd[i].indStart);
+        const strExtract = getStrExtract(strVal, indexStr, sepInd[i].indStart);
+        console.log(strExtract);
         indexStr = sepInd[i].indEnd + 1;
         console.log("indexStr:" + indexStr);
         console.log("i: " + i);
@@ -114,7 +115,8 @@ const mySplit = (strObj) => {
     // check s'il reste des char à récupérer après le dernier séparateur
     if (sepInd[sepInd.length - 1].indEnd < strVal.length -1) {
         console.log("str doesnt end with sep");
-        getStrExtract(strVal, sepInd[sepInd.length - 1].indEnd + 1, strVal.length);
+        const strExtract = getStrExtract(strVal, sepInd[sepInd.length - 1].indEnd + 1, strVal.length);
+        console.log(strExtract);
     }
 
 }
