@@ -25,4 +25,9 @@ const argTester = () => {
 
 }
 
+const concatenation = (stringsArr, separator) => {
+    console.log(stringsArr);
+    console.log(separator);
+}
+
 argTester();
