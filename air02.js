@@ -21,7 +21,7 @@ const argTester = () => {
         argObj.strArr.push(args[i]);
     }
 
-    console.log(argObj);
+    return argObj;
 
 }
 
@@ -30,4 +30,12 @@ const concatenation = (stringsArr, separator) => {
     console.log(separator);
 }
 
-argTester();
+const main = () => {
+
+    const argObj = argTester();
+
+    console.log(argObj);
+
+}
+
+main();
