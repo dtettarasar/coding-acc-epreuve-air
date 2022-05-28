@@ -34,7 +34,11 @@ const main = () => {
 
     const argObj = argTester();
 
-    console.log(argObj);
+    if (argObj) {
+        
+        concatenation(argObj.strArr, argObj.separator);
+
+    }
 
 }
 
