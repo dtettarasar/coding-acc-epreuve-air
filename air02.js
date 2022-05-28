@@ -47,7 +47,8 @@ const main = () => {
 
     if (argObj) {
         
-        concatenation(argObj.strArr, argObj.separator);
+        const result = concatenation(argObj.strArr, argObj.separator);
+        console.log(result);
 
     }
 
