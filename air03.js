@@ -10,7 +10,7 @@ const argTester = () => {
         return false;
     }
 
-    console.log(arguments);
+    return arguments;
 
 }
 
@@ -30,5 +30,17 @@ const getQuantity = (str, array) => {
 
 }
 
-argTester();
+const main = () => {
+
+    const arguments = argTester();
+
+    if (arguments) {
+
+        getQuantity(arguments[0], arguments);
+
+    }
+
+}
+
+main();
 
