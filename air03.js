@@ -4,6 +4,8 @@ const argTester = () => {
 
     const arguments = process.argv.slice(2);
 
+    const data = [];
+
     if (arguments.length < 3) {
         console.log("Veuillez passer au moins 3 chaînes de caractère en argument");
         console.log("node air03.js 'Muse' 'Queens' 'Artic Monkeys' 'Queens' 'Muse' 'Motörhead'");
@@ -26,7 +28,23 @@ const getQuantity = (str, array) => {
 
     }
 
-    console.log(quantity);
+    return quantity;
+
+}
+
+const getIntruders = (array) => {
+
+    const intruders = [];
+
+    for (let i = 0; i < array.length; i++) {
+        strQty = getQuantity(array[i], array);
+
+        if (strQty === 1) {
+            intruders.push(array[i]);
+        }
+    }
+
+    console.log(intruders);
 
 }
 
@@ -36,7 +54,7 @@ const main = () => {
 
     if (arguments) {
 
-        getQuantity(arguments[0], arguments);
+        getIntruders(arguments);
 
     }
 
