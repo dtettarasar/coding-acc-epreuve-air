@@ -14,5 +14,21 @@ const argTester = () => {
 
 }
 
+const getQuantity = (str, array) => {
+
+    let quantity = 0;
+
+    for (let i = 0; i < array.length; i++) {
+
+        if (array[i] === str) {
+            quantity++;
+        }
+
+    }
+
+    console.log(quantity);
+
+}
+
 argTester();
 
