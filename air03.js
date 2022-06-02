@@ -47,7 +47,7 @@ const getIntruders = (array) => {
         }
     }
 
-    console.log(intruders);
+    return intruders;
 
 }
 
@@ -57,7 +57,7 @@ const main = () => {
 
     if (arguments) {
 
-        getIntruders(arguments);
+        console.log(getIntruders(arguments));
 
     }
 
