@@ -1,5 +1,6 @@
 // Chercher l'intrus
 
+// Récupérer les arguments passés à l'execution de la fonction
 const argTester = () => {
 
     const arguments = process.argv.slice(2);
@@ -8,7 +9,7 @@ const argTester = () => {
 
     if (arguments.length < 3) {
         console.log("Veuillez passer au moins 3 chaînes de caractère en argument");
-        console.log("node air03.js 'Muse' 'Queens' 'Artic Monkeys' 'Queens' 'Muse' 'Motörhead'");
+        console.log("node air03.js 'Muse' 'Queens' 'Arctic Monkeys' 'Queens' 'Muse' 'Motörhead'");
         return false;
     }
 
@@ -16,6 +17,7 @@ const argTester = () => {
 
 }
 
+// Identifier le nombre de fois où une string est présente dans un array
 const getQuantity = (str, array) => {
 
     let quantity = 0;
@@ -32,6 +34,7 @@ const getQuantity = (str, array) => {
 
 }
 
+// Identifier les strings qui ne sont pas présentes au moins 2 fois dans un array
 const getIntruders = (array) => {
 
     const intruders = [];
