@@ -51,6 +51,7 @@ const getIntruders = (array) => {
 
 }
 
+// Afficher résultat
 const main = () => {
 
     const arguments = argTester();
