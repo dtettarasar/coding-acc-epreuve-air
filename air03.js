@@ -57,7 +57,11 @@ const main = () => {
 
     if (arguments) {
 
-        console.log(getIntruders(arguments));
+        const intruders = getIntruders(arguments);
+
+        for (let i = 0; i < intruders.length; i++) {
+            console.log(intruders[i]);
+        }
 
     }
 
