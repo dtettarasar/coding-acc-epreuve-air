@@ -14,12 +14,20 @@ const argTester = () => {
 
 }
 
+const removeDuplicateChar = (str) => {
+
+    const strArr = str.split('');
+
+    console.log(strArr);
+
+}
+
 const main = () => {
 
     const argument = argTester();
 
     if (argument) {
-        console.log(argument);
+        removeDuplicateChar(argument);
     }
 
 }
