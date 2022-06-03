@@ -16,7 +16,11 @@ const argTester = () => {
 
 const main = () => {
 
-    argTester();
+    const argument = argTester();
+
+    if (argument) {
+        console.log(argument);
+    }
 
 }
 
