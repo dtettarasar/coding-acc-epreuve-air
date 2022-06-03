@@ -16,9 +16,18 @@ const argTester = () => {
 
 const removeDuplicateChar = (str) => {
 
+    const finalStrArr = [];
     const strArr = str.split('');
 
-    console.log(strArr);
+    for (let i = 0; i < strArr.length; i++) {
+
+        if (strArr[i] !== strArr[i - 1]) {
+            finalStrArr.push(strArr[i]);
+        }
+
+    }
+
+    return finalStrArr.join('');
 
 }
 
@@ -27,7 +36,8 @@ const main = () => {
     const argument = argTester();
 
     if (argument) {
-        removeDuplicateChar(argument);
+        const result = removeDuplicateChar(argument);
+        console.log(result);
     }
 
 }
