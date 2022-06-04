@@ -24,7 +24,7 @@ const argTester = () => {
             } else {
 
                 data.intForCalc = intVal;
-                
+
             }
 
 
@@ -37,9 +37,18 @@ const argTester = () => {
 
     }
 
-    console.log(arguments);
-    console.log(data);
+    return data;
 
 }
 
-argTester();
+const main = () => {
+
+    const arguments = argTester();
+
+    if (arguments) {
+        console.log(arguments);
+    }
+
+}
+
+main();
