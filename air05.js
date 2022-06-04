@@ -62,7 +62,7 @@ const main = () => {
 
     if (arguments) {
         const result = updateArr(arguments.intList, arguments.intForCalc);
-        console.log(result);
+        console.log(result.join(' '));
     }
 
 }
