@@ -41,12 +41,27 @@ const argTester = () => {
 
 }
 
+const updateArr = (intArr, intToAdd) => {
+
+    const finalArr = [];
+
+    for (let i = 0; i < intArr.length; i++) {
+
+        const result = intArr[i] + intToAdd;
+        finalArr.push(result);
+
+    }
+
+    console.log(finalArr);
+
+}
+
 const main = () => {
 
     const arguments = argTester();
 
     if (arguments) {
-        console.log(arguments);
+        updateArr(arguments.intList, arguments.intForCalc);
     }
 
 }
