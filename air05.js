@@ -3,18 +3,31 @@
 const argTester = () => {
 
     const data = {
-        intList: []
+        intList: [],
+        intForCalc: null
     }
 
     const intPattern = /^(\+?|-?)[0-9]+$/;
 
     const arguments = process.argv.slice(2);
 
-    for (let i = 0; i < arguments.length -1; i++) {
+    for (let i = 0; i < arguments.length; i++) {
 
         if (intPattern.test(arguments[i])) {
+
             const intVal = parseInt(arguments[i]);
-            data.intList.push(intVal)
+
+            if (i < arguments.length -1) {
+
+                data.intList.push(intVal);
+
+            } else {
+
+                data.intForCalc = intVal;
+                
+            }
+
+
         } else {
             console.log("Veuillez passer une série de nombre entier en arguments");
             console.log("Veuillez passer en dernier, le nombre à utiliser pour tous les calculs");
