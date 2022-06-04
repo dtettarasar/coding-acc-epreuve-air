@@ -52,7 +52,7 @@ const updateArr = (intArr, intToAdd) => {
 
     }
 
-    console.log(finalArr);
+    return finalArr;
 
 }
 
@@ -61,7 +61,8 @@ const main = () => {
     const arguments = argTester();
 
     if (arguments) {
-        updateArr(arguments.intList, arguments.intForCalc);
+        const result = updateArr(arguments.intList, arguments.intForCalc);
+        console.log(result);
     }
 
 }
