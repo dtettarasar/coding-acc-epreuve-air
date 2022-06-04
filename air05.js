@@ -4,8 +4,9 @@ const argTester = () => {
 
     const data = {
         intList: []
-    };
-    const intPattern = /^-?[0-9]+$/;
+    }
+
+    const intPattern = /^(\+?|-?)[0-9]+$/;
 
     const arguments = process.argv.slice(2);
 
