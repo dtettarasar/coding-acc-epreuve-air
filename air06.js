@@ -74,6 +74,7 @@ const strInStr = (fullStr, sampleStr) => {
 
 }
 
+// Utiliser strInStr() sur tout un array de string
 const strCtrl = (strArr, sampleStr) => {
 
     const finalArr = [];
@@ -88,18 +89,20 @@ const strCtrl = (strArr, sampleStr) => {
 
     }
 
-    console.log(finalArr);
+    return finalArr;
 
 }
 
-
+// Afficher résultat
 const main = () => {
 
     const arguments = argTester();
 
     if (arguments) {
 
-        strCtrl(arguments.strArr, arguments.strSample);
+       const result = strCtrl(arguments.strArr, arguments.strSample);
+
+       console.log(result.join(', '))
 
     }
 
