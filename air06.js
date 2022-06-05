@@ -15,7 +15,15 @@ const argTester = () => {
         return false;
     }
 
-    console.log(arguments);
+    for (let i = 0; i < arguments.length - 1; i++) {
+
+        data.strArr.push(arguments[i]);
+
+    }
+
+    data.strSample = arguments[arguments.length - 1];
+
+    console.log(data);
 
 }
 
