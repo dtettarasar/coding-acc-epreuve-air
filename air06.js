@@ -18,13 +18,13 @@ const argTester = () => {
 
     for (let i = 0; i < arguments.length - 1; i++) {
 
-        data.strArr.push(arguments[i].toLowerCase());
+        data.strArr.push(arguments[i]);
 
     }
 
-    data.strSample = arguments[arguments.length - 1].toLowerCase();
+    data.strSample = arguments[arguments.length - 1];
 
-    console.log(data);
+    return data;
 
 }
 
@@ -80,7 +80,7 @@ const strCtrl = (strArr, sampleStr) => {
 
     for (let i = 0; i < strArr.length; i++) {
 
-        const testStr = strInStr(strArr[i], sampleStr);
+        const testStr = strInStr(strArr[i].toLowerCase(), sampleStr.toLowerCase());
 
         if (!testStr) {
             finalArr.push(strArr[i]);
@@ -93,4 +93,17 @@ const strCtrl = (strArr, sampleStr) => {
 }
 
 
-argTester();
+const main = () => {
+
+    const arguments = argTester();
+
+    if (arguments) {
+
+        strCtrl(arguments.strArr, arguments.strSample);
+
+    }
+
+}
+
+main();
+
