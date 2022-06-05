@@ -74,5 +74,23 @@ const strInStr = (fullStr, sampleStr) => {
 
 }
 
+const strCtrl = (strArr, sampleStr) => {
+
+    const finalArr = [];
+
+    for (let i = 0; i < strArr.length; i++) {
+
+        const testStr = strInStr(strArr[i], sampleStr);
+
+        if (!testStr) {
+            finalArr.push(strArr[i]);
+        }
+
+    }
+
+    console.log(finalArr);
+
+}
+
 
 argTester();
