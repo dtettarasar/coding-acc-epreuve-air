@@ -18,11 +18,11 @@ const argTester = () => {
 
     for (let i = 0; i < arguments.length - 1; i++) {
 
-        data.strArr.push(arguments[i]);
+        data.strArr.push(arguments[i].toLowerCase());
 
     }
 
-    data.strSample = arguments[arguments.length - 1];
+    data.strSample = arguments[arguments.length - 1].toLowerCase();
 
     console.log(data);
 
