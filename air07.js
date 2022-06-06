@@ -44,4 +44,14 @@ const argTester = () => {
 
 }
 
-console.log(argTester());
+const main = () => {
+
+    const argument = argTester();
+
+    if (argument) {
+        console.log(argument);
+    }
+
+}
+
+main();
