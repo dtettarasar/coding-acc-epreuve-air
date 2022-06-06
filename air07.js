@@ -44,12 +44,17 @@ const argTester = () => {
 
 }
 
+const sortedInsert = (array, newElem) => {
+    console.log("Array: " + array);
+    console.log("New Element to add: " + newElem);
+}
+
 const main = () => {
 
     const argument = argTester();
 
     if (argument) {
-        console.log(argument);
+        sortedInsert(argument.initialArr, argument.elemToAdd);
     }
 
 }
