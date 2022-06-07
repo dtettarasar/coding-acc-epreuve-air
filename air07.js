@@ -44,6 +44,31 @@ const argTester = () => {
 
 }
 
+const selectionSort = (array, indStart) => {
+
+    let lowestNumInd = indStart;
+  
+    for (let i = indStart; i < array.length; i++) {
+  
+      if (array[i] < array[lowestNumInd]) {
+        lowestNumInd = i;
+      }
+  
+    }
+  
+    const temp = array[indStart];
+    array[indStart] = array[lowestNumInd];
+    array[lowestNumInd] = temp;
+  
+    if (indStart !== array.length - 1) {
+      indStart++;
+      selectionSort(array, indStart);
+    }
+  
+    return array;
+  
+}
+
 const sortedInsert = (array, newElem) => {
 
     const arrayToSort = [...array];
@@ -51,7 +76,7 @@ const sortedInsert = (array, newElem) => {
 
     console.log("Array: " + array);
     console.log("New Element to add: " + newElem);
-    console.log(arrayToSort);
+    console.log(selectionSort(arrayToSort, 0));
 }
 
 const main = () => {
