@@ -45,8 +45,13 @@ const argTester = () => {
 }
 
 const sortedInsert = (array, newElem) => {
+
+    const arrayToSort = [...array];
+    arrayToSort.push(newElem);
+
     console.log("Array: " + array);
     console.log("New Element to add: " + newElem);
+    console.log(arrayToSort);
 }
 
 const main = () => {
