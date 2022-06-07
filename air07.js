@@ -85,7 +85,8 @@ const main = () => {
     const argument = argTester();
 
     if (argument) {
-        console.log(sortedInsert(argument.initialArr, argument.elemToAdd));
+        const result = sortedInsert(argument.initialArr, argument.elemToAdd);
+        console.log(result.join(' '));
     }
 
 }
