@@ -74,9 +74,10 @@ const sortedInsert = (array, newElem) => {
     const arrayToSort = [...array];
     arrayToSort.push(newElem);
 
-    console.log("Array: " + array);
-    console.log("New Element to add: " + newElem);
-    console.log(selectionSort(arrayToSort, 0));
+    const sortedArray = selectionSort(arrayToSort, 0);
+
+    return sortedArray;
+
 }
 
 const main = () => {
@@ -84,7 +85,7 @@ const main = () => {
     const argument = argTester();
 
     if (argument) {
-        sortedInsert(argument.initialArr, argument.elemToAdd);
+        console.log(sortedInsert(argument.initialArr, argument.elemToAdd));
     }
 
 }
