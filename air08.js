@@ -7,6 +7,12 @@ const argTester = () => {
     const argArr = [];
     const errorMsg = "Veuillez passer en argument deux séries de nombres entiers, séparées par 'fusion'.\nExemple: node air07.js 10 20 30 fusion 15 25 35";
 
+    let switchToSndArr = false;
+    const data = {
+        arrOne: [],
+        arrTwo: []
+    }
+
     if (argument.length < 3 || getQuantity("fusion", argument) !== 1) {
         console.log(errorMsg);
         return false;
