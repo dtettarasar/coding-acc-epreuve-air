@@ -101,8 +101,7 @@ const sortedFusion = (array1, array2) => {
 
     const sortedArray = selectionSort([...fullArr], 0);
 
-    console.log(fullArr);
-    console.log(sortedArray);
+    return sortedArray;
 
 }
 
@@ -113,7 +112,8 @@ const main = () => {
     const argument = argTester();
 
     if (argument) {
-        sortedFusion(argument.arrOne, argument.arrTwo);
+        const result = sortedFusion(argument.arrOne, argument.arrTwo);
+        console.log(result.join(' '));
     }
 
 }
