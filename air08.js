@@ -24,9 +24,9 @@ const argTester = () => {
             if (argument[i] === "fusion") {
                 switchToSndArr = true;
             } else if (!switchToSndArr) {
-                data.arrOne.push(parseInt(argument[i]));
+                data.arrOne.push(argument[i]);
             } else {
-                data.arrTwo.push(parseInt(argument[i]));
+                data.arrTwo.push(argument[i]);
             }
 
         } else {
@@ -63,8 +63,20 @@ const sortedFusion = (array1, array2) => {
     const length = array1.length < array2.length ? array2.length : array1.length;
     console.log("highest length: " + length);
 
-    console.log(array1);
-    console.log(array2);
+    for (let i = 0; i < length; i++) {
+        
+        if (array1[i]) {
+            fullArr.push(parseInt(array1[i]));
+        }
+
+        if (array2[i]) {
+            fullArr.push(parseInt(array2[i]));
+        }
+
+    }
+
+    console.log(fullArr);
+
 }
 
 
