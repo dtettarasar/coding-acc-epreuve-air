@@ -57,11 +57,20 @@ const getQuantity = (str, array) => {
 
 }
 
+const sortedFusion = (array1, array2) => {
+    console.log(array1);
+    console.log(array2);
+}
+
 
 
 const main = () => {
 
-    console.log(argTester());
+    const argument = argTester();
+
+    if (argument) {
+        sortedFusion(argument.arrOne, argument.arrTwo);
+    }
 
 }
 
