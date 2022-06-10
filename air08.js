@@ -57,6 +57,31 @@ const getQuantity = (str, array) => {
 
 }
 
+const selectionSort = (array, indStart) => {
+
+    let lowestNumInd = indStart;
+  
+    for (let i = indStart; i < array.length; i++) {
+  
+      if (array[i] < array[lowestNumInd]) {
+        lowestNumInd = i;
+      }
+  
+    }
+  
+    const temp = array[indStart];
+    array[indStart] = array[lowestNumInd];
+    array[lowestNumInd] = temp;
+  
+    if (indStart !== array.length - 1) {
+      indStart++;
+      selectionSort(array, indStart);
+    }
+  
+    return array;
+  
+}
+
 const sortedFusion = (array1, array2) => {
 
     const fullArr = [];
@@ -74,7 +99,10 @@ const sortedFusion = (array1, array2) => {
 
     }
 
+    const sortedArray = selectionSort([...fullArr], 0);
+
     console.log(fullArr);
+    console.log(sortedArray);
 
 }
 
