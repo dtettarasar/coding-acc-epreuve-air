@@ -24,9 +24,9 @@ const argTester = () => {
             if (argument[i] === "fusion") {
                 switchToSndArr = true;
             } else if (!switchToSndArr) {
-                data.arrOne.push(argument[i]);
+                data.arrOne.push(parseInt(argument[i]));
             } else {
-                data.arrTwo.push(argument[i]);
+                data.arrTwo.push(parseInt(argument[i]));
             }
 
         } else {
