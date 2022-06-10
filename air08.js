@@ -1,5 +1,6 @@
 // Mélange deux tableaux triés 
 
+// Récupérer arguments
 const argTester = () => {
 
     const argument = process.argv.slice(2);
@@ -57,6 +58,7 @@ const getQuantity = (str, array) => {
 
 }
 
+// Fonction de tri
 const selectionSort = (array, indStart) => {
 
     let lowestNumInd = indStart;
@@ -82,6 +84,7 @@ const selectionSort = (array, indStart) => {
   
 }
 
+// Fusion deux arrays et tri
 const sortedFusion = (array1, array2) => {
 
     const fullArr = [];
@@ -105,8 +108,7 @@ const sortedFusion = (array1, array2) => {
 
 }
 
-
-
+// Afficher résultat
 const main = () => {
 
     const argument = argTester();
