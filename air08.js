@@ -61,7 +61,6 @@ const sortedFusion = (array1, array2) => {
 
     const fullArr = [];
     const length = array1.length < array2.length ? array2.length : array1.length;
-    console.log("highest length: " + length);
 
     for (let i = 0; i < length; i++) {
         
