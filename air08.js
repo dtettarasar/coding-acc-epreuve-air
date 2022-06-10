@@ -29,7 +29,18 @@ const argTester = () => {
 
     }
 
-    console.log(argArr);
+    for (let i = 0; i < argument.length; i++) {
+
+        if (argument[i] === "fusion") {
+            switchToSndArr = true;
+        } else if (!switchToSndArr) {
+            data.arrOne.push(argument[i]);
+        } else {
+            data.arrTwo.push(argument[i]);
+        }
+    }
+
+    return data;
 
 }
 
@@ -50,4 +61,12 @@ const getQuantity = (str, array) => {
 
 }
 
-argTester();
+
+
+const main = () => {
+
+    console.log(argTester());
+
+}
+
+main();
