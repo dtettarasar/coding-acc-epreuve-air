@@ -58,6 +58,11 @@ const getQuantity = (str, array) => {
 }
 
 const sortedFusion = (array1, array2) => {
+
+    const fullArr = [];
+    const length = array1.length < array2.length ? array2.length : array1.length;
+    console.log("highest length: " + length);
+
     console.log(array1);
     console.log(array2);
 }
