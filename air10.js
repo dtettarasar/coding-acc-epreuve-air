@@ -52,7 +52,11 @@ const main = () => {
         const txtArr = getTxtArr(argument);
 
         if (txtArr) {
-            console.log(txtArr);
+
+            for (let i = 0; i < txtArr.length; i++) {
+                console.log(txtArr[i]);
+            }
+
         }
     }
 
