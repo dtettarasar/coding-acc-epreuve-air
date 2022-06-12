@@ -27,12 +27,33 @@ const argTester = () => {
 
 }
 
+const getTxtArr = (file) => {
+
+    try {
+
+        const fs = require('fs');
+        const readline = require('readline');
+        const txtArr = fs.readFileSync(file, 'utf8').split('\n');
+        return txtArr;
+
+    } catch (error) {
+        console.log("Erreur : ce fichier n'existe pas !");
+        return false;
+    }
+
+}
+
 const main = () => {
 
     const argument = argTester();
 
     if (argument) {
-        console.log(argument);
+
+        const txtArr = getTxtArr(argument);
+
+        if (txtArr) {
+            console.log(txtArr);
+        }
     }
 
 }
