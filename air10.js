@@ -11,14 +11,13 @@ const argTester = () => {
         console.log(errorMsg);
         return false;
     } else {
-        fileName = argument[0];
+        filePath = argument[0];
     }
 
     for (let i = 0; i < fileFormat.length; i++) {
 
-        if (fileName.endsWith(fileFormat[i])) {
-            console.log(fileName);
-            return true;
+        if (filePath.endsWith(fileFormat[i])) {
+            return filePath;
         }
 
     }
@@ -28,4 +27,14 @@ const argTester = () => {
 
 }
 
-argTester();
+const main = () => {
+
+    const argument = argTester();
+
+    if (argument) {
+        console.log(argument);
+    }
+
+}
+
+main();
