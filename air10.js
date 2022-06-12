@@ -17,7 +17,7 @@ const argTester = () => {
     for (let i = 0; i < fileFormat.length; i++) {
 
         if (fileName.endsWith(fileFormat[i])) {
-            console.log(argument);
+            console.log(fileName);
             return true;
         }
 
