@@ -12,6 +12,11 @@ const argTester = () => {
         return false;
     }
 
+    data.charVal = arguments[0];
+    data.intVal = parseInt(arguments[1]);
+
+    return data;
+
 }
 
 const buildPyramid = (char, int) => {
@@ -21,6 +26,12 @@ const buildPyramid = (char, int) => {
 
 const main = () => {
     
+    const argument = argTester();
+
+    if (argument) {
+        console.log(argument);
+    }
+
 }
 
-argTester();
+main();
