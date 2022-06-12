@@ -14,7 +14,18 @@ const argTester = () => {
 
 }
 
-const rotateArr = (array) = {
+const rotateArr = (array) => {
+
+    const finalArr = [];
+    const lastElem = array[0];
+
+    for (let i = 1; i < array.length;i++) {
+        finalArr.push(array[i]);
+    }
+
+    finalArr.push(lastElem);
+
+    return finalArr;
 
 }
 
@@ -23,7 +34,8 @@ const main = () => {
     const arguments = argTester();
 
     if (arguments) {
-        console.log(arguments);
+        const result = rotateArr(arguments);
+        console.log(result.join(', '));
     }
 
 }
