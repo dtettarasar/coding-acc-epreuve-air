@@ -61,7 +61,10 @@ const main = () => {
 
     if (argument) {
         const pyramid = buildPyramid(argument.charVal, argument.intVal);
-        console.log(pyramid);
+
+        for (let i = 0; i < pyramid.length; i++) {
+            console.log(pyramid[i]);
+        }
     }
 
 }
