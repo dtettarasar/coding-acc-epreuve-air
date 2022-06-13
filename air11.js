@@ -20,16 +20,25 @@ const argTester = () => {
 }
 
 const buildPyramid = (char, int) => {
-    console.log(char);
-    console.log(int);
+    // console.log(char);
+    // console.log(int);
 
     let charAmount = 1;
+    let spaceAmount = int - 1;
 
     for (let i = 0; i < int; i++) {
 
         const line = [];
+        const spaceArr = [];
+
+        for (let a = 0; a < spaceAmount; a++) {
+            spaceArr.push(" ");
+        }
         
-        console.log(charAmount);
+        // console.log("char: " + charAmount);
+        // console.log("space: " + spaceAmount);
+
+        line.push(spaceArr.join(''));
 
         for (let j = 0; j < charAmount; j++) {
 
@@ -37,9 +46,10 @@ const buildPyramid = (char, int) => {
 
         }
 
-        console.log(line);
+        console.log(line.join(''));
 
         charAmount += 2;
+        spaceAmount -= 1;
 
     }
 }
