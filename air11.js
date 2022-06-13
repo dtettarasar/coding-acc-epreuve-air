@@ -1,4 +1,4 @@
-// Afficher un pyramide
+// Afficher une pyramide
 
 const argTester = () => {
 
@@ -22,6 +22,26 @@ const argTester = () => {
 const buildPyramid = (char, int) => {
     console.log(char);
     console.log(int);
+
+    let charAmount = 1;
+
+    for (let i = 0; i < int; i++) {
+
+        const line = [];
+        
+        console.log(charAmount);
+
+        for (let j = 0; j < charAmount; j++) {
+
+            line.push(char);
+
+        }
+
+        console.log(line);
+
+        charAmount += 2;
+
+    }
 }
 
 const main = () => {
@@ -29,7 +49,7 @@ const main = () => {
     const argument = argTester();
 
     if (argument) {
-        console.log(argument);
+        const pyramid = buildPyramid(argument.charVal, argument.intVal);
     }
 
 }
