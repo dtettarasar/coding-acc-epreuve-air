@@ -20,8 +20,8 @@ const argTester = () => {
 }
 
 const buildPyramid = (char, int) => {
-    // console.log(char);
-    // console.log(int);
+
+    const pyramidArr = [];
 
     let charAmount = 1;
     let spaceAmount = int - 1;
@@ -35,9 +35,6 @@ const buildPyramid = (char, int) => {
             spaceArr.push(" ");
         }
         
-        // console.log("char: " + charAmount);
-        // console.log("space: " + spaceAmount);
-
         line.push(spaceArr.join(''));
 
         for (let j = 0; j < charAmount; j++) {
@@ -46,12 +43,16 @@ const buildPyramid = (char, int) => {
 
         }
 
-        console.log(line.join(''));
+        const lineStr = line.join('');
+
+        pyramidArr.push(lineStr);
 
         charAmount += 2;
         spaceAmount -= 1;
 
     }
+
+    return pyramidArr;
 }
 
 const main = () => {
@@ -60,6 +61,7 @@ const main = () => {
 
     if (argument) {
         const pyramid = buildPyramid(argument.charVal, argument.intVal);
+        console.log(pyramid);
     }
 
 }
