@@ -29,6 +29,8 @@ const argTester = () => {
 
 const quickSort = (array) => {
 
+    console.log(array);
+
 }
 
 const main = () => {
@@ -36,7 +38,7 @@ const main = () => {
     const argument = argTester();
 
     if (argument) {
-        console.log(argument);
+        quickSort(argument);
     }
 }
 
