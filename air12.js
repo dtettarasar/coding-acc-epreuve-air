@@ -29,6 +29,28 @@ const argTester = () => {
 
 const quickSort = (array) => {
 
+    let indInitPivot = array.length - 1;
+    let indPivot = 0;
+
+    for (let i = 0; i < array.length - 1; i++) {
+
+        if (array[i] < array[indInitPivot]) {
+
+            const temp = array[i];
+            array[i] = array[indPivot];
+            array[indPivot] = temp;
+
+            indPivot++;
+        }
+
+    }
+
+    const temp = array[indInitPivot];
+    array[indInitPivot] = array[indPivot];
+    array[indPivot] = temp;
+
+    console.log(array);
+
 }
 
 const main = () => {
@@ -36,7 +58,7 @@ const main = () => {
     const argument = argTester();
 
     if (argument) {
-        console.log(argument);
+        quickSort(argument);
     }
 }
 
