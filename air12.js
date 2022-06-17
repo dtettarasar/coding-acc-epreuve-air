@@ -27,12 +27,12 @@ const argTester = () => {
 
 }
 
-const quickSort = (array) => {
+const quickSortPartition = (array, indStartPart, indEndPart) => {
 
-    let indInitPivot = array.length - 1;
-    let indPivot = 0;
+    let indInitPivot = indEndPart;
+    let indPivot = indStartPart;
 
-    for (let i = 0; i < array.length - 1; i++) {
+    for (let i = indStartPart; i < indEndPart; i++) {
 
         if (array[i] < array[indInitPivot]) {
 
@@ -53,12 +53,17 @@ const quickSort = (array) => {
 
 }
 
+const quickSortProcess = () => {
+    
+}
+
+
 const main = () => {
 
     const argument = argTester();
 
     if (argument) {
-        quickSort(argument);
+        quickSortPartition(argument, 0, argument.length - 1);
     }
 }
 
