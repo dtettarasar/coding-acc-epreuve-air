@@ -79,7 +79,7 @@ const main = () => {
 
     if (argument) {
         const result = quickSortProcess(argument);
-        console.log(result);
+        console.log(result.join(' '));
     }
 
 }
