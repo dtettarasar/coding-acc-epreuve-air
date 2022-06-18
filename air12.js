@@ -49,7 +49,7 @@ const quickSortPartition = (array, indStartPart, indEndPart) => {
     array[indInitPivot] = array[indPivot];
     array[indPivot] = temp;
 
-    console.log(array);
+    //console.log(array);
 
     return indPivot;
 
@@ -61,11 +61,22 @@ const quickSortProcess = (array, indStartProc = 0, indEndProc = null) => {
         indEndProc = array.length - 1;
     }
 
+    console.log("indEndProc: " + indEndProc);
+    console.log("indStartProc: " + indStartProc);
+
     if (indEndProc > indStartProc) {
 
+        console.log("relaunch");
+
         let pivot = quickSortPartition(array, indStartProc, indEndProc);
-        console.log(pivot);
+
+        quickSortProcess(array, indStartProc, pivot -1);
+        quickSortProcess(array, pivot + 1, indEndProc);
+
+        // console.log(pivot);
  
+    } else {
+        console.log(array);
     }
 
 }
