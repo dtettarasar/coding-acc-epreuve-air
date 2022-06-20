@@ -58,4 +58,7 @@ const main = () => {
 
 }
 
-main();
+//main();
+
+
+export {mySplit};
