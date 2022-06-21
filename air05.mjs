@@ -9,15 +9,22 @@ const argTester = () => {
 
     const intPattern = /^(\+?|-?)[0-9]+$/;
 
-    const arguments = process.argv.slice(2);
+    const args = process.argv.slice(2);
 
-    for (let i = 0; i < arguments.length; i++) {
+    if (args.length < 2) {
+        console.log("Veuillez passer une série de nombre entier en arguments");
+        console.log("Veuillez passer en dernier, le nombre à utiliser pour tous les calculs");
+        console.log("Exemple: node air05.js 10 11 12 20 '-5'");
+        return false;
+    }
 
-        if (intPattern.test(arguments[i])) {
+    for (let i = 0; i < args.length; i++) {
 
-            const intVal = parseInt(arguments[i]);
+        if (intPattern.test(args[i])) {
 
-            if (i < arguments.length -1) {
+            const intVal = parseInt(args[i]);
+
+            if (i < args.length -1) {
 
                 data.intList.push(intVal);
 
@@ -58,10 +65,10 @@ const updateArr = (intArr, intToAdd) => {
 
 const main = () => {
 
-    const arguments = argTester();
+    const args = argTester();
 
-    if (arguments) {
-        const result = updateArr(arguments.intList, arguments.intForCalc);
+    if (args) {
+        const result = updateArr(args.intList, args.intForCalc);
         console.log(result.join(' '));
     }
 

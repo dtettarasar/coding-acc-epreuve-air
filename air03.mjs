@@ -3,17 +3,17 @@
 // Récupérer les arguments passés à l'execution de la fonction
 const argTester = () => {
 
-    const arguments = process.argv.slice(2);
+    const args = process.argv.slice(2);
 
     const data = [];
 
-    if (arguments.length < 3) {
+    if (args.length < 3) {
         console.log("Veuillez passer au moins 3 chaînes de caractère en argument");
         console.log("node air03.js 'Muse' 'Queens' 'Arctic Monkeys' 'Queens' 'Muse' 'Motörhead'");
         return false;
     }
 
-    return arguments;
+    return args;
 
 }
 
@@ -40,7 +40,7 @@ const getIntruders = (array) => {
     const intruders = [];
 
     for (let i = 0; i < array.length; i++) {
-        strQty = getQuantity(array[i], array);
+        const strQty = getQuantity(array[i], array);
 
         if (strQty === 1) {
             intruders.push(array[i]);
@@ -54,11 +54,11 @@ const getIntruders = (array) => {
 // Afficher résultat
 const main = () => {
 
-    const arguments = argTester();
+    const args = argTester();
 
-    if (arguments) {
+    if (args) {
 
-        const intruders = getIntruders(arguments);
+        const intruders = getIntruders(args);
 
         for (let i = 0; i < intruders.length; i++) {
             console.log(intruders[i]);
