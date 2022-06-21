@@ -63,6 +63,10 @@ const main = () => {
 //Get file name
 const args = process.argv;
 const arr = args[1].split('/');
-console.log(arr[arr.length - 1]);
+
+// Execute main
+if (arr[arr.length - 1] === "air00.mjs") {
+    main();
+}
 
 export {mySplit};
