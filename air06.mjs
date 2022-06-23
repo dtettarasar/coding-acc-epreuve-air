@@ -1,28 +1,28 @@
 // Contrôle de pass sanitaire
 
-// Récupérer les arguments
+// Récupérer les args
 const argTester = () => {
 
-    const arguments = process.argv.slice(2);
+    const args = process.argv.slice(2);
 
     const data = {
         strArr: [],
         strSample: ""
     }
 
-    if (arguments.length < 2) {
+    if (args.length < 2) {
         console.log("Veuillez passer au moins deux chaînes de caractère en argument.");
         console.log("Exemple: node air06.js Metallica Megadeth Slayer Anthrax Testament me");
         return false;
     }
 
-    for (let i = 0; i < arguments.length - 1; i++) {
+    for (let i = 0; i < args.length - 1; i++) {
 
-        data.strArr.push(arguments[i]);
+        data.strArr.push(args[i]);
 
     }
 
-    data.strSample = arguments[arguments.length - 1];
+    data.strSample = args[args.length - 1];
 
     return data;
 
@@ -96,11 +96,11 @@ const strCtrl = (strArr, sampleStr) => {
 // Afficher résultat
 const main = () => {
 
-    const arguments = argTester();
+    const args = argTester();
 
-    if (arguments) {
+    if (args) {
 
-       const result = strCtrl(arguments.strArr, arguments.strSample);
+       const result = strCtrl(args.strArr, args.strSample);
 
        console.log(result.join(', '))
 
