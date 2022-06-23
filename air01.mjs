@@ -9,7 +9,7 @@ const argTester = () => {
     if (args.length !== 2) {
 
         console.log("Veuillez passer deux chaînes de caractère en argument (la chaîne a découper puis le séparateur)");
-        console.log("Exemple : node air01.js 'The Ace Of Spades' 'Of'");
+        console.log("Exemple : node air01.mjs 'The Ace Of Spades' 'Of'");
 
         return false;
 
