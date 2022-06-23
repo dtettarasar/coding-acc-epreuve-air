@@ -2,18 +2,18 @@
 
 const argTester = () => {
 
-    const arguments = process.argv.slice(2);
+    const args = process.argv.slice(2);
     const intPattern = /^[0-9]+$/;
     const data = {};
     const errorMsg = "Veuillez passer en argument un caractère et un nombre entier positif.\nExemple: node air11.js o 5";
 
-    if (arguments.length !== 2 || arguments[0].length !== 1 || !intPattern.test(arguments[1])) {
+    if (args.length !== 2 || args[0].length !== 1 || !intPattern.test(args[1])) {
         console.log(errorMsg);
         return false;
     }
 
-    data.charVal = arguments[0];
-    data.intVal = parseInt(arguments[1]);
+    data.charVal = args[0];
+    data.intVal = parseInt(args[1]);
 
     return data;
 
