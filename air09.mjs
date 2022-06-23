@@ -2,15 +2,15 @@
 
 const argTester = () => {
 
-    const arguments = process.argv.slice(2);
+    const args = process.argv.slice(2);
 
-    if (arguments.length < 2) {
+    if (args.length < 2) {
         console.log("Veuillez passer au moins deux arguments.");
         console.log("Exemple : node air09.js Rust in Peace");
         return false;
     }
 
-    return arguments
+    return args
 
 }
 
@@ -31,10 +31,10 @@ const rotateArr = (array) => {
 
 const main = () => {
 
-    const arguments = argTester();
+    const args = argTester();
 
-    if (arguments) {
-        const result = rotateArr(arguments);
+    if (args) {
+        const result = rotateArr(args);
         console.log(result.join(', '));
     }
 
