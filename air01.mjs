@@ -149,3 +149,5 @@ const arr = args[1].split('/');
 if (arr[arr.length - 1] === "air01.mjs") {
     main();
 }
+
+export {arrComparison, findSepIndexes, getStrExtract, mySplit};
