@@ -5,7 +5,7 @@ const argTester = () => {
 
     const argument = process.argv.slice(2);
     const intPattern = /^-?[0-9]+$/;
-    const errorMsg = "Veuillez passer en argument deux séries de nombres entiers, séparées par 'fusion'.\nExemple: node air07.js 10 20 30 fusion 15 25 35";
+    const errorMsg = "Veuillez passer en argument deux séries de nombres entiers, séparées par 'fusion'.\nExemple: node air07.mjs 10 20 30 fusion 15 25 35";
 
     let switchToSndArr = false;
     const data = {

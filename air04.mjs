@@ -6,7 +6,7 @@ const argTester = () => {
 
     if (argument.length !== 1) {
         console.log("Veuillez passer une chaîne de caractère en argument.");
-        console.log("node air04.js 'All Out Life'");
+        console.log("node air04.mjs 'All Out Life'");
         return false;
     }
 

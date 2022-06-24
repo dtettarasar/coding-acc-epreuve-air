@@ -14,7 +14,7 @@ const argTester = () => {
     if (args.length < 2) {
         console.log("Veuillez passer une série de nombre entier en arguments");
         console.log("Veuillez passer en dernier, le nombre à utiliser pour tous les calculs");
-        console.log("Exemple: node air05.js 10 11 12 20 '-5'");
+        console.log("Exemple: node air05.mjs 10 11 12 20 '-5'");
         return false;
     }
 

@@ -2,7 +2,7 @@
 
 const argTester = () => {
 
-    const errorMsg = "Veuillez passer le nom d'un fichier en argument (formats lisibles : .txt, .md).\nExemple : node air10.js test.txt";
+    const errorMsg = "Veuillez passer le nom d'un fichier en argument (formats lisibles : .txt, .md).\nExemple : node air10.mjs test.txt";
     const fileFormat = [".txt", ".md"];  
     const argument = process.argv.slice(2);
     let fileName = "";
