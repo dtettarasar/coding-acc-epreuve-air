@@ -91,4 +91,11 @@ const main = () => {
 
 }
 
-main();
+//Get file name
+const args = process.argv;
+const arr = args[1].split('/');
+
+// Execute main if we launch the script directly in terminal
+if (arr[arr.length - 1] === "air07.mjs") {
+    main();
+}
