@@ -62,3 +62,5 @@ const arr = args[1].split('/');
 if (arr[arr.length - 1] === "air02.mjs") {
     main();
 }
+
+export {concatenation};

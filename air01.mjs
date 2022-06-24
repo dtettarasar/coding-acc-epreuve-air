@@ -150,4 +150,4 @@ if (arr[arr.length - 1] === "air01.mjs") {
     main();
 }
 
-export {arrComparison, findSepIndexes, getStrExtract, mySplit};
+export {mySplit};
