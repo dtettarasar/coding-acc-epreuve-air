@@ -19,6 +19,7 @@ console.log("--------");
 // Test air01
 console.log("test air01");
 console.log(air01Split('The Ace Of Spades', 'Of'));
+console.log(air01Split('Crevette magique dans la mer des étoiles', 'la'));
 console.log("--------");
 
 // Test air02
