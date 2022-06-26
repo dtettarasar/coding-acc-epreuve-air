@@ -2,16 +2,17 @@
 
 const argTester = () => {
 
-    const errorMsg = "Veuillez passer le nom d'un fichier en argument (formats lisibles : .txt, .md).\nExemple : node air10.mjs test.txt";
+    const errorMsg = "Veuillez passer le nom d'un fichier en argument (le fichier doit être dans le même répertoire que que script. Formats lisibles : .txt, .md).\nExemple : node air10.mjs test.txt";
     const fileFormat = [".txt", ".md"];  
     const argument = process.argv.slice(2);
-    let fileName = "";
+    let filePath = process.argv[1];
 
     if (argument.length !== 1) {
         console.log(errorMsg);
         return false;
     } else {
         filePath = argument[0];
+        console.log("filePath: " + filePath);
     }
 
     for (let i = 0; i < fileFormat.length; i++) {
@@ -28,6 +29,8 @@ const argTester = () => {
 }
 
 const getTxtArr = (file) => {
+
+    console.log("file: " + file);
 
     try {
 
