@@ -7,6 +7,7 @@ import {mySplit as air01Split} from "./air01.mjs";
 import {concatenation} from "./air02.mjs";
 import {getIntruders} from "./air03.mjs";
 import {removeDuplicateChar} from "./air04.mjs";
+import {updateArr} from "./air05.mjs";
 
 // Test air00
 console.log("test air00");
@@ -32,4 +33,10 @@ console.log("--------");
 // Test air04
 console.log("test air04");
 console.log(removeDuplicateChar('Hello milady,   bien ou quoi ??'));
+console.log("--------");
+
+// Test air05
+console.log("test air05");
+console.log(updateArr([1, 2, 3, 4, 5], 2));
+console.log(updateArr([10, 11, 12, 20], -5));
 console.log("--------");

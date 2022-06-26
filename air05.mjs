@@ -82,3 +82,5 @@ const arr = args[1].split('/');
 if (arr[arr.length - 1] === "air05.mjs") {
     main();
 }
+
+export {updateArr};
