@@ -99,3 +99,5 @@ const arr = args[1].split('/');
 if (arr[arr.length - 1] === "air07.mjs") {
     main();
 }
+
+export {sortedInsert};

@@ -9,6 +9,7 @@ import {getIntruders} from "./air03.mjs";
 import {removeDuplicateChar} from "./air04.mjs";
 import {updateArr} from "./air05.mjs";
 import {strCtrl} from "./air06.mjs";
+import {sortedInsert} from "./air07.mjs";
 
 // Test air00
 console.log("test air00");
@@ -52,3 +53,8 @@ console.log(strCtrl(['Michel', 'Albert', 'Thérèse', 'Benoit'], "t"));
 console.log(strCtrl(['Metallica', 'Megadeth', 'Slayer', 'Anthrax', 'Testament'], "me"));
 console.log("--------");
 
+// Test air07
+console.log("test air07");
+console.log(sortedInsert([1, 3, 4], 2));
+console.log(sortedInsert([10, 20, 30, 40, 50, 60, 70, 90], 33));
+console.log("--------");
