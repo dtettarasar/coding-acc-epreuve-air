@@ -77,3 +77,4 @@ if (arr[arr.length - 1] === "air03.mjs") {
     main();
 }
 
+export {getIntruders};
