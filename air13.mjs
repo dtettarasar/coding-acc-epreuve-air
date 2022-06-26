@@ -11,6 +11,7 @@ import {updateArr} from "./air05.mjs";
 import {strCtrl} from "./air06.mjs";
 import {sortedInsert} from "./air07.mjs";
 import {sortedFusion} from "./air08.mjs";
+import {rotateArr} from "./air09.mjs";
 
 // Test air00
 console.log("test air00");
@@ -64,3 +65,10 @@ console.log("--------");
 console.log("test air08");
 console.log(sortedFusion([10, 20, 30], [15, 25, 35]));
 console.log(sortedFusion([4, 6, 8], [5, 7, 9]));
+console.log("--------");
+
+// Test air09
+console.log("test air09");
+console.log(rotateArr(['Michel', 'Albert', 'Thérèse', 'Benoit']));
+console.log(rotateArr(['Rust', 'in', 'Peace']));
+console.log("--------");
