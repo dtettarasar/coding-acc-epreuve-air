@@ -117,3 +117,4 @@ if (arr[arr.length - 1] === "air06.mjs") {
     main();
 }
 
+export {strCtrl};
