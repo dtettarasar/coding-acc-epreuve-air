@@ -10,6 +10,7 @@ import {removeDuplicateChar} from "./air04.mjs";
 import {updateArr} from "./air05.mjs";
 import {strCtrl} from "./air06.mjs";
 import {sortedInsert} from "./air07.mjs";
+import {sortedFusion} from "./air08.mjs";
 
 // Test air00
 console.log("test air00");
@@ -58,3 +59,8 @@ console.log("test air07");
 console.log(sortedInsert([1, 3, 4], 2));
 console.log(sortedInsert([10, 20, 30, 40, 50, 60, 70, 90], 33));
 console.log("--------");
+
+// Test air08
+console.log("test air08");
+console.log(sortedFusion([10, 20, 30], [15, 25, 35]));
+console.log(sortedFusion([4, 6, 8], [5, 7, 9]));
