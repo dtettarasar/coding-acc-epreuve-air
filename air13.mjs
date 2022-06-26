@@ -37,6 +37,7 @@ console.log("--------");
 // Test air04
 console.log("test air04");
 console.log(removeDuplicateChar('Hello milady,   bien ou quoi ??'));
+console.log(removeDuplicateChar('All Out Life !!'));
 console.log("--------");
 
 // Test air05
