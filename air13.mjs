@@ -24,6 +24,7 @@ console.log("--------");
 
 // Test air02
 console.log("test air02");
+console.log(concatenation(["je", "teste", "des", "trucs"], " "));
 console.log(concatenation(["megadeth", "metallica", "anthrax", "exodus", "testament"], ", "));
 console.log("--------");
 
