@@ -14,6 +14,7 @@ import {sortedFusion} from "./air08.mjs";
 import {rotateArr} from "./air09.mjs";
 import {getTxtArr} from "./air10.mjs";
 import {buildPyramid} from "./air11.mjs";
+import {quickSortProcess} from "./air12.mjs";
 
 // Test air00
 console.log("test air00");
@@ -81,8 +82,14 @@ console.log(getTxtArr("test-air10-1.txt"));
 console.log(getTxtArr("test-air10-2.txt"));
 console.log("--------");
 
-// Test air10
+// Test air11
 console.log("test air11");
 console.log(buildPyramid("o", 7));
 console.log(buildPyramid("!", 8));
+console.log("--------");
+
+// Test air12
+console.log("test air12");
+console.log(quickSortProcess([11,9,39,2,8,87,92,63,74,6,5,69,63,33,30]));
+console.log(quickSortProcess([4,1,8,6,2,9,5,3,0,7]));
 console.log("--------");
