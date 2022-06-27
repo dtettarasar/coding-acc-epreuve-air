@@ -1,5 +1,8 @@
 // Afficher le contenu
 
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
+
 const argTester = () => {
 
     const errorMsg = "Veuillez passer le nom d'un fichier en argument (le fichier doit être dans le même répertoire que que script. Formats lisibles : .txt, .md).\nExemple : node air10.mjs test.txt";
@@ -11,8 +14,7 @@ const argTester = () => {
         console.log(errorMsg);
         return false;
     } else {
-        filePath = argument[0];
-        console.log("filePath: " + filePath);
+        filePath = "./" + argument[0];
     }
 
     for (let i = 0; i < fileFormat.length; i++) {
@@ -30,8 +32,6 @@ const argTester = () => {
 
 const getTxtArr = (file) => {
 
-    console.log("file: " + file);
-
     try {
 
         const fs = require('fs');
@@ -41,6 +41,7 @@ const getTxtArr = (file) => {
 
     } catch (error) {
         console.log("Erreur : ce fichier n'existe pas !");
+        console.log(error);
         return false;
     }
 
