@@ -12,6 +12,7 @@ import {strCtrl} from "./air06.mjs";
 import {sortedInsert} from "./air07.mjs";
 import {sortedFusion} from "./air08.mjs";
 import {rotateArr} from "./air09.mjs";
+import {getTxtArr} from "./air10.mjs";
 
 // Test air00
 console.log("test air00");
@@ -71,4 +72,10 @@ console.log("--------");
 console.log("test air09");
 console.log(rotateArr(['Michel', 'Albert', 'Thérèse', 'Benoit']));
 console.log(rotateArr(['Rust', 'in', 'Peace']));
+console.log("--------");
+
+// Test air10
+console.log("test air10");
+console.log(getTxtArr("test-air10-1.txt"));
+console.log(getTxtArr("test-air10-2.txt"));
 console.log("--------");

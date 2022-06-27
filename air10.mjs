@@ -73,3 +73,5 @@ const arr = args[1].split('/');
 if (arr[arr.length - 1] === "air10.mjs") {
     main();
 }
+
+export {getTxtArr};
