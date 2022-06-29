@@ -41,18 +41,18 @@ const testAir00 = (strToTest, arrExpected) => {
     }
 }
 
-const testAir00a = testAir00("Fear Of The Dark", [ 'Fear', 'Of', 'The', 'Dark' ]);
-const testAir00b = testAir00("Bonjour les gars", [ 'Bonjour', 'les', 'gars' ]);
-console.log("air00 (1/2) : " + testAir00a);
-console.log("air00 (2/2) : " + testAir00b);
+const testAir00Str = ["Fear Of The Dark","Bonjour les gars"];
+const testAir00Arr = [
+    [ 'Fear', 'Of', 'The', 'Dark' ],
+    [ 'Bonjour', 'les', 'gars' ]
+];
 
-// Test air01
-/*
-console.log("test air01");
-console.log(air01Split('The Ace Of Spades', 'Of'));
-console.log(air01Split('Crevette magique dans la mer des étoiles', 'la'));
-console.log("--------");
-*/
+for (let i = 0; i < testAir00Str.length; i++) {
+    const testResult = testAir00(testAir00Str[i], testAir00Arr[i]);
+    const testNum = i + 1;
+    console.log("air00 ("+ testNum +"/" + testAir00Str.length + ") : " + testResult);
+}
+
 
 // Test air02
 /*
