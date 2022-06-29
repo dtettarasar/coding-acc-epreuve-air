@@ -16,8 +16,12 @@ import {getTxtArr} from "./air10.mjs";
 import {buildPyramid} from "./air11.mjs";
 import {quickSortProcess} from "./air12.mjs";
 
+let totalTest = 0;
+let totalSuccesses = 0;
+
 // Test air00
 const testAir00 = (strToTest, arrExpected) => {
+    totalTest++;
     const arrGenerated = air00Split(strToTest);
     if (arrGenerated.length === arrExpected.length) {
 
@@ -27,6 +31,7 @@ const testAir00 = (strToTest, arrExpected) => {
             }
         }
 
+        totalSuccesses++;
         return "success";
 
     } else {
@@ -136,3 +141,5 @@ console.log(quickSortProcess([11,9,39,2,8,87,92,63,74,6,5,69,63,33,30]));
 console.log(quickSortProcess([4,1,8,6,2,9,5,3,0,7]));
 console.log("--------");
 */
+
+console.log("Total success: ("+ totalSuccesses +"/"+ totalTest +")");
