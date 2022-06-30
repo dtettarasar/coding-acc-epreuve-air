@@ -67,9 +67,20 @@ const testAir01argArr = [
     }
 ];
 
+const testAir01 = (argObj, strExpected) => {
+
+    const test = concatenation(argObj.array, argObj.sep);
+    console.log(test);
+
+}
+
 console.log("test air02");
+/*
 console.log(concatenation(testAir01argArr[0].array, testAir01argArr[0].sep));
 console.log(concatenation(testAir01argArr[1].array, testAir01argArr[1].sep));
+*/
+testAir01(testAir01argArr[0]);
+testAir01(testAir01argArr[1]);
 console.log("--------");
 
 
