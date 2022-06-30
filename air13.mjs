@@ -53,35 +53,44 @@ for (let i = 0; i < testAir00Str.length; i++) {
     console.log("air00 ("+ testNum +"/" + testAir00Str.length + ") : " + testResult);
 }
 
+// Test air01
+//TODO
 
 // Test air02
-
-const testAir01argArr = [
+const testAir02argArr = [
     {
         array: ["je", "teste", "des", "trucs"],
-        sep: " "
+        sep: " ",
+        result: "je teste des trucs"
     },
     {
         array: ["megadeth", "metallica", "anthrax", "exodus", "testament"],
-        sep: ", "
+        sep: ", ",
+        result: "megadeth, metallica, anthrax, exodus, testament"
     }
 ];
 
-const testAir01 = (argObj, strExpected) => {
+const testAir02 = (argObj) => {
 
     const test = concatenation(argObj.array, argObj.sep);
-    console.log(test);
+
+    if (test === argObj.result) {
+
+        return "success";
+
+    } else {
+
+        return "failure";
+
+    }
 
 }
 
-console.log("test air02");
-/*
-console.log(concatenation(testAir01argArr[0].array, testAir01argArr[0].sep));
-console.log(concatenation(testAir01argArr[1].array, testAir01argArr[1].sep));
-*/
-testAir01(testAir01argArr[0]);
-testAir01(testAir01argArr[1]);
-console.log("--------");
+for (let i = 0; i < testAir02argArr.length; i++) {
+    const testResult = testAir02(testAir02argArr[i]);
+    const testNum = i + 1;
+    console.log("air02 ("+ testNum +"/" + testAir02argArr.length + ") : " + testResult);
+}
 
 
 // Test air03
