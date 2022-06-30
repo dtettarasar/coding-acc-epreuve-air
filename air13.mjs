@@ -54,7 +54,35 @@ for (let i = 0; i < testAir00Str.length; i++) {
 }
 
 // Test air01
-//TODO
+
+const testAir01argArr = [
+    {
+        strToCut: "Crevette magique dans la mer des étoiles",
+        sep: "la",
+        result: [
+            [
+              'C', 'r', 'e', 'v', 'e',
+              't', 't', 'e', ' ', 'm',
+              'a', 'g', 'i', 'q', 'u',
+              'e', ' ', 'd', 'a', 'n',
+              's', ' '
+            ],
+            [
+              ' ', 'm', 'e', 'r',
+              ' ', 'd', 'e', 's',
+              ' ', 'é', 't', 'o',
+              'i', 'l', 'e', 's'
+            ]
+        ]
+    }
+]
+
+const testAir01 = (argObj) => {
+    const test = air01Split(argObj.strToCut, argObj.sep);
+    console.log(test);
+}
+
+testAir01(testAir01argArr[0]);
 
 // Test air02
 const testAir02argArr = [
