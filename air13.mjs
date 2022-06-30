@@ -55,12 +55,23 @@ for (let i = 0; i < testAir00Str.length; i++) {
 
 
 // Test air02
-/*
+
+const testAir01argArr = [
+    {
+        array: ["je", "teste", "des", "trucs"],
+        sep: " "
+    },
+    {
+        array: ["megadeth", "metallica", "anthrax", "exodus", "testament"],
+        sep: ", "
+    }
+];
+
 console.log("test air02");
-console.log(concatenation(["je", "teste", "des", "trucs"], " "));
-console.log(concatenation(["megadeth", "metallica", "anthrax", "exodus", "testament"], ", "));
+console.log(concatenation(testAir01argArr[0].array, testAir01argArr[0].sep));
+console.log(concatenation(testAir01argArr[1].array, testAir01argArr[1].sep));
 console.log("--------");
-*/
+
 
 // Test air03
 /*
