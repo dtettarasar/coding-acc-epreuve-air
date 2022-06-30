@@ -71,11 +71,12 @@ const testAir02argArr = [
 ];
 
 const testAir02 = (argObj) => {
-
+    totalTest++;
     const test = concatenation(argObj.array, argObj.sep);
 
     if (test === argObj.result) {
 
+        totalSuccesses++;
         return "success";
 
     } else {
