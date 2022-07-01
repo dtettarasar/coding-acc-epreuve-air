@@ -41,16 +41,21 @@ const testAir00 = (strToTest, arrExpected) => {
     }
 }
 
-const testAir00Str = ["Fear Of The Dark","Bonjour les gars"];
-const testAir00Arr = [
-    [ 'Fear', 'Of', 'The', 'Dark' ],
-    [ 'Bonjour', 'les', 'gars' ]
-];
+const testAir00argArr = [
+    {
+        str:"Fear Of The Dark",
+        result:[ 'Fear', 'Of', 'The', 'Dark' ]
+    },
+    {
+        str:"Bonjour les gars",
+        result:[ 'Bonjour', 'les', 'gars' ]
+    }
+]
 
-for (let i = 0; i < testAir00Str.length; i++) {
-    const testResult = testAir00(testAir00Str[i], testAir00Arr[i]);
+for (let i = 0; i < testAir00argArr.length; i++) {
+    const testResult = testAir00(testAir00argArr[i].str, testAir00argArr[i].result);
     const testNum = i + 1;
-    console.log("air00 ("+ testNum +"/" + testAir00Str.length + ") : " + testResult);
+    console.log("air00 ("+ testNum +"/" + testAir00argArr.length + ") : " + testResult);
 }
 
 // Test air01
@@ -82,7 +87,7 @@ const testAir01 = (argObj) => {
     console.log(test);
 }
 
-testAir01(testAir01argArr[0]);
+//testAir01(testAir01argArr[0]);
 
 // Test air02
 const testAir02argArr = [
