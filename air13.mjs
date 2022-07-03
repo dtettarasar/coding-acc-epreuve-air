@@ -52,11 +52,17 @@ const testAir00argArr = [
     }
 ]
 
-for (let i = 0; i < testAir00argArr.length; i++) {
-    const testResult = testAir00(testAir00argArr[i]);
-    const testNum = i + 1;
-    console.log("air00 ("+ testNum +"/" + testAir00argArr.length + ") : " + testResult);
+const testAir00Starter = () => {
+
+    for (let i = 0; i < testAir00argArr.length; i++) {
+        const testResult = testAir00(testAir00argArr[i]);
+        const testNum = i + 1;
+        console.log("air00 ("+ testNum +"/" + testAir00argArr.length + ") : " + testResult);
+    }
+
 }
+
+//testAir00Starter();
 
 // Test air01
 
@@ -79,6 +85,22 @@ const testAir01argArr = [
               'i', 'l', 'e', 's'
             ]
         ]
+    },
+    {
+        strToCut: "The Ace Of Spades",
+        sep: "Of",
+        result: [
+            [
+                'T', 'h', 'e',
+                ' ', 'A', 'c',
+                'e', ' '
+            ],
+            [
+                ' ', 'S', 'p',
+                'a', 'd', 'e',
+                's'
+            ]
+        ]
     }
 ]
 
@@ -87,7 +109,8 @@ const testAir01 = (argObj) => {
     console.log(test);
 }
 
-//testAir01(testAir01argArr[0]);
+testAir01(testAir01argArr[0]);
+testAir01(testAir01argArr[1]);
 
 // Test air02
 const testAir02argArr = [
@@ -120,11 +143,17 @@ const testAir02 = (argObj) => {
 
 }
 
-for (let i = 0; i < testAir02argArr.length; i++) {
-    const testResult = testAir02(testAir02argArr[i]);
-    const testNum = i + 1;
-    console.log("air02 ("+ testNum +"/" + testAir02argArr.length + ") : " + testResult);
+const testAir02Starter = () => {
+
+    for (let i = 0; i < testAir02argArr.length; i++) {
+        const testResult = testAir02(testAir02argArr[i]);
+        const testNum = i + 1;
+        console.log("air02 ("+ testNum +"/" + testAir02argArr.length + ") : " + testResult);
+    }
+
 }
+
+//testAir02Starter();
 
 
 // Test air03
