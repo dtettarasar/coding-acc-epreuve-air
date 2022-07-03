@@ -20,13 +20,13 @@ let totalTest = 0;
 let totalSuccesses = 0;
 
 // Test air00
-const testAir00 = (strToTest, arrExpected) => {
+const testAir00 = (argObj) => {
     totalTest++;
-    const arrGenerated = air00Split(strToTest);
-    if (arrGenerated.length === arrExpected.length) {
+    const arrGenerated = air00Split(argObj.str);
+    if (arrGenerated.length === argObj.result.length) {
 
         for (let i = 0; i < arrGenerated.length; i++) {
-            if (arrGenerated[i] !== arrExpected[i]) {
+            if (arrGenerated[i] !== argObj.result[i]) {
                 return "failure";
             }
         }
@@ -53,7 +53,7 @@ const testAir00argArr = [
 ]
 
 for (let i = 0; i < testAir00argArr.length; i++) {
-    const testResult = testAir00(testAir00argArr[i].str, testAir00argArr[i].result);
+    const testResult = testAir00(testAir00argArr[i]);
     const testNum = i + 1;
     console.log("air00 ("+ testNum +"/" + testAir00argArr.length + ") : " + testResult);
 }
