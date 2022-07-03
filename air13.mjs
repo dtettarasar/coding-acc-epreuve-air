@@ -105,12 +105,23 @@ const testAir01argArr = [
 ]
 
 const testAir01 = (argObj) => {
+
+    totalTest++;
     const test = air01Split(argObj.strToCut, argObj.sep);
-    console.log(test);
+    const testStr = test.join('');
+    const resultStr = argObj.result.join('');
+
+    if (testStr === resultStr) {
+        totalSuccesses++;
+        return "success";
+    } else {
+        return "failure";
+    }
+
 }
 
-testAir01(testAir01argArr[0]);
-testAir01(testAir01argArr[1]);
+console.log(testAir01(testAir01argArr[0]));
+console.log(testAir01(testAir01argArr[1]));
 
 // Test air02
 const testAir02argArr = [

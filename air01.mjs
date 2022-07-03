@@ -1,5 +1,7 @@
 // Split en fonction
 
+//TO DO : gérer l'erreur si le separateur spécifié en argument n'est pas présent dans la str
+
 const argTester = () => {
 
     const args = process.argv.slice(2);
@@ -95,7 +97,7 @@ const getStrExtract = (str, indStart, indEnd) => {
 
 }
 
-// fonction qui va diviser une string en focntion d'un séparateur
+// fonction qui va diviser une string en fonction d'un séparateur
 const mySplit = (fullStr, separator) => {
     
     const strVal = fullStr;
