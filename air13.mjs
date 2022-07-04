@@ -120,8 +120,17 @@ const testAir01 = (argObj) => {
 
 }
 
-console.log(testAir01(testAir01argArr[0]));
-console.log(testAir01(testAir01argArr[1]));
+const testAir01Starter = () => {
+
+    for (let i = 0; i < testAir01argArr.length; i++) {
+        const testResult = testAir01(testAir01argArr[i]);
+        const testNum = i + 1;
+        console.log("air01 ("+ testNum +"/" + testAir01argArr.length + ") : " + testResult);
+    }
+
+}
+
+testAir01Starter();
 
 // Test air02
 const testAir02argArr = [
