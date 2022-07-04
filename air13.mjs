@@ -62,7 +62,7 @@ const testAir00Starter = () => {
 
 }
 
-//testAir00Starter();
+testAir00Starter();
 
 // Test air01
 
@@ -173,16 +173,55 @@ const testAir02Starter = () => {
 
 }
 
-//testAir02Starter();
-
+testAir02Starter();
 
 // Test air03
-/*
-console.log("test air03");
-console.log(getIntruders(["1", "2", "3", "4", "5", "4", "3", "2", "1"]));
-console.log(getIntruders(["bonjour", "monsieur", "bonjour"]));
-console.log("--------");
-*/
+const testAir03argArr = [
+    {
+        array: ["1", "2", "3", "4", "5", "4", "3", "2", "1"],
+        result: [ '5' ]
+    },
+    {
+        array: ['Muse', 'Queens', 'Arctic Monkeys', 'Queens', 'Muse', 'Motörhead'],
+        result: [ 'Arctic Monkeys', 'Motörhead' ]
+    },
+    {
+        array: ['Bonjour', 'Monsieur', 'Bonjour'],
+        result: ['Monsieur']
+    }
+];
+
+const testAir03 = (argObj) => {
+
+    totalTest++;
+    const test = getIntruders(argObj.array);
+    const testStr = test.join(',');
+    const resultStr = argObj.result.join(',');
+
+    if (testStr === resultStr) {
+
+        totalSuccesses++;
+        return "success";
+
+    } else {
+
+        return "failure";
+
+    }
+
+}
+
+const testAir03Starter = () => {
+
+    for (let i = 0; i < testAir03argArr.length; i++) {
+        const testResult = testAir03(testAir03argArr[i]);
+        const testNum = i + 1;
+        console.log("air03 ("+ testNum +"/" + testAir03argArr.length + ") : " + testResult);
+    }
+
+}
+
+testAir03Starter();
 
 // Test air04
 /*
