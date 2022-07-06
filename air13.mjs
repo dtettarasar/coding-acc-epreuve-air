@@ -19,6 +19,16 @@ import {quickSortProcess} from "./air12.mjs";
 let totalTest = 0;
 let totalSuccesses = 0;
 
+const testStarter = (scriptNum, testFunc, argArr) => {
+
+    for (let i = 0; i < argArr.length; i++) {
+        const testResult = testFunc(argArr[i]);
+        const testNum = i + 1;
+        console.log(scriptNum + " ("+ testNum +"/" + argArr.length + ") : " + testResult);
+    }
+
+}
+
 // Test air00
 const testAir00 = (argObj) => {
     totalTest++;
@@ -61,6 +71,8 @@ const testAir00Starter = () => {
     }
 
 }
+
+testStarter("air00", testAir00, testAir00argArr);
 
 // testAir00Starter();
 
