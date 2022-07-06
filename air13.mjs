@@ -62,7 +62,7 @@ const testAir00Starter = () => {
 
 }
 
-testAir00Starter();
+// testAir00Starter();
 
 // Test air01
 
@@ -130,7 +130,7 @@ const testAir01Starter = () => {
 
 }
 
-testAir01Starter();
+// testAir01Starter();
 
 // Test air02
 const testAir02argArr = [
@@ -173,7 +173,7 @@ const testAir02Starter = () => {
 
 }
 
-testAir02Starter();
+// testAir02Starter();
 
 // Test air03
 const testAir03argArr = [
@@ -221,15 +221,50 @@ const testAir03Starter = () => {
 
 }
 
-testAir03Starter();
+// testAir03Starter();
 
 // Test air04
-/*
-console.log("test air04");
-console.log(removeDuplicateChar('Hello milady,   bien ou quoi ??'));
-console.log(removeDuplicateChar('All Out Life !!'));
-console.log("--------");
-*/
+
+const testAir04argArr = [
+    {
+        str:'Hello milady,   bien ou quoi ??',
+        result:'Helo milady, bien ou quoi ?'
+    },
+    {
+        str:'All Out Life !!',
+        result:'Al Out Life !'
+    }
+];
+
+const testAir04 = (argObj) => {
+
+    totalTest++;
+    const test = removeDuplicateChar(argObj.str);
+    
+    if (test === argObj.result) {
+
+        totalSuccesses++;
+        return "success";
+
+    } else {
+
+        return "failure";
+
+    }
+
+};
+
+const testAir04Starter = () => {
+
+    for (let i = 0; i < testAir04argArr.length; i++) {
+        const testResult = testAir04(testAir04argArr[i]);
+        const testNum = i + 1;
+        console.log("air04 ("+ testNum +"/" + testAir04argArr.length + ") : " + testResult);
+    }
+
+}
+
+//testAir04Starter();
 
 // Test air05
 /*
