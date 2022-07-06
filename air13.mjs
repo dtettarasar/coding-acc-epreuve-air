@@ -62,20 +62,6 @@ const testAir00argArr = [
     }
 ]
 
-const testAir00Starter = () => {
-
-    for (let i = 0; i < testAir00argArr.length; i++) {
-        const testResult = testAir00(testAir00argArr[i]);
-        const testNum = i + 1;
-        console.log("air00 ("+ testNum +"/" + testAir00argArr.length + ") : " + testResult);
-    }
-
-}
-
-testStarter("air00", testAir00, testAir00argArr);
-
-// testAir00Starter();
-
 // Test air01
 
 const testAir01argArr = [
@@ -131,18 +117,6 @@ const testAir01 = (argObj) => {
     }
 
 }
-
-const testAir01Starter = () => {
-
-    for (let i = 0; i < testAir01argArr.length; i++) {
-        const testResult = testAir01(testAir01argArr[i]);
-        const testNum = i + 1;
-        console.log("air01 ("+ testNum +"/" + testAir01argArr.length + ") : " + testResult);
-    }
-
-}
-
-// testAir01Starter();
 
 // Test air02
 const testAir02argArr = [
@@ -341,5 +315,8 @@ console.log(quickSortProcess([11,9,39,2,8,87,92,63,74,6,5,69,63,33,30]));
 console.log(quickSortProcess([4,1,8,6,2,9,5,3,0,7]));
 console.log("--------");
 */
+
+testStarter("air00", testAir00, testAir00argArr);
+testStarter("air01", testAir01, testAir01argArr);
 
 console.log("Total success: ("+ totalSuccesses +"/"+ totalTest +")");
