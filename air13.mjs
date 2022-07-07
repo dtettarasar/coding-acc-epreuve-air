@@ -217,12 +217,25 @@ const testAir04 = (argObj) => {
 };
 
 // Test air05
-/*
+
+const testAir04argArr = [
+    {
+        array:[1, 2, 3, 4, 5],
+        int: 2,
+        result:[ 3, 4, 5, 6, 7 ]
+    },
+    {
+        array:[10, 11, 12, 20],
+        int:-5,
+        result:[ 5, 6, 7, 15 ]
+    }
+];
+
 console.log("test air05");
 console.log(updateArr([1, 2, 3, 4, 5], 2));
 console.log(updateArr([10, 11, 12, 20], -5));
 console.log("--------");
-*/
+
 
 // Test air06
 /*
@@ -280,10 +293,12 @@ console.log(quickSortProcess([4,1,8,6,2,9,5,3,0,7]));
 console.log("--------");
 */
 
+/*
 testStarter("air00", testAir00, testAir00argArr);
 testStarter("air01", testAir01, testAir01argArr);
 testStarter("air02", testAir02, testAir02argArr);
 testStarter("air03", testAir03, testAir03argArr);
 testStarter("air04", testAir04, testAir04argArr);
+*/
 
 console.log("Total success: ("+ totalSuccesses +"/"+ totalTest +")");
