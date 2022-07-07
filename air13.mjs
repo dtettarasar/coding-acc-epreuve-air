@@ -218,7 +218,7 @@ const testAir04 = (argObj) => {
 
 // Test air05
 
-const testAir04argArr = [
+const testAir05argArr = [
     {
         array:[1, 2, 3, 4, 5],
         int: 2,
