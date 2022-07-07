@@ -63,7 +63,6 @@ const testAir00argArr = [
 ]
 
 // Test air01
-
 const testAir01argArr = [
     {
         strToCut: "Crevette magique dans la mer des étoiles",
@@ -186,7 +185,6 @@ const testAir03 = (argObj) => {
 }
 
 // Test air04
-
 const testAir04argArr = [
     {
         str:'Hello milady,   bien ou quoi ??',
@@ -217,7 +215,6 @@ const testAir04 = (argObj) => {
 };
 
 // Test air05
-
 const testAir05argArr = [
     {
         array:[1, 2, 3, 4, 5],
@@ -231,10 +228,29 @@ const testAir05argArr = [
     }
 ];
 
-console.log("test air05");
-console.log(updateArr([1, 2, 3, 4, 5], 2));
-console.log(updateArr([10, 11, 12, 20], -5));
-console.log("--------");
+const testAir05 = (argObj) => {
+
+    totalTest++;
+    const test = updateArr(argObj.array, argObj.int);
+
+    if (test.length === argObj.result.length) {
+
+        for (let i = 0; i < test.length; i++) {
+            if (test[i] !== argObj.result[i]) {
+                return "failure";
+            }
+        }
+
+        totalSuccesses++;
+        return "success";
+
+    } else {
+
+        return "failure";
+
+    }
+
+};
 
 
 // Test air06
@@ -293,12 +309,13 @@ console.log(quickSortProcess([4,1,8,6,2,9,5,3,0,7]));
 console.log("--------");
 */
 
-/*
+
 testStarter("air00", testAir00, testAir00argArr);
 testStarter("air01", testAir01, testAir01argArr);
 testStarter("air02", testAir02, testAir02argArr);
 testStarter("air03", testAir03, testAir03argArr);
 testStarter("air04", testAir04, testAir04argArr);
-*/
+testStarter("air05", testAir05, testAir05argArr);
+
 
 console.log("Total success: ("+ totalSuccesses +"/"+ totalTest +")");
