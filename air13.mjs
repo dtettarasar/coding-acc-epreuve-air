@@ -149,18 +149,6 @@ const testAir02 = (argObj) => {
 
 }
 
-const testAir02Starter = () => {
-
-    for (let i = 0; i < testAir02argArr.length; i++) {
-        const testResult = testAir02(testAir02argArr[i]);
-        const testNum = i + 1;
-        console.log("air02 ("+ testNum +"/" + testAir02argArr.length + ") : " + testResult);
-    }
-
-}
-
-// testAir02Starter();
-
 // Test air03
 const testAir03argArr = [
     {
@@ -197,18 +185,6 @@ const testAir03 = (argObj) => {
 
 }
 
-const testAir03Starter = () => {
-
-    for (let i = 0; i < testAir03argArr.length; i++) {
-        const testResult = testAir03(testAir03argArr[i]);
-        const testNum = i + 1;
-        console.log("air03 ("+ testNum +"/" + testAir03argArr.length + ") : " + testResult);
-    }
-
-}
-
-// testAir03Starter();
-
 // Test air04
 
 const testAir04argArr = [
@@ -239,18 +215,6 @@ const testAir04 = (argObj) => {
     }
 
 };
-
-const testAir04Starter = () => {
-
-    for (let i = 0; i < testAir04argArr.length; i++) {
-        const testResult = testAir04(testAir04argArr[i]);
-        const testNum = i + 1;
-        console.log("air04 ("+ testNum +"/" + testAir04argArr.length + ") : " + testResult);
-    }
-
-}
-
-//testAir04Starter();
 
 // Test air05
 /*
@@ -318,5 +282,8 @@ console.log("--------");
 
 testStarter("air00", testAir00, testAir00argArr);
 testStarter("air01", testAir01, testAir01argArr);
+testStarter("air02", testAir02, testAir02argArr);
+testStarter("air03", testAir03, testAir03argArr);
+testStarter("air04", testAir04, testAir04argArr);
 
 console.log("Total success: ("+ totalSuccesses +"/"+ totalTest +")");
