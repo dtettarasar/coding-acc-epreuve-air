@@ -254,12 +254,43 @@ const testAir05 = (argObj) => {
 
 
 // Test air06
-/*
-console.log("test air06");
-console.log(strCtrl(['Michel', 'Albert', 'Thérèse', 'Benoit'], "t"));
-console.log(strCtrl(['Metallica', 'Megadeth', 'Slayer', 'Anthrax', 'Testament'], "me"));
-console.log("--------");
-*/
+
+const testAir06argArr = [
+    {
+        array:['Michel', 'Albert', 'Thérèse', 'Benoit'],
+        ctrl:"t",
+        result:[ 'Michel' ]
+    },
+    {
+        array:['Metallica', 'Megadeth', 'Slayer', 'Anthrax', 'Testament'],
+        ctrl:"me",
+        result:[ 'Slayer', 'Anthrax' ]
+    }
+];
+
+const testAir06 = (argObj) => {
+
+    totalTest++;
+    const test = strCtrl(argObj.array, argObj.ctrl);
+
+    if (test.length === argObj.result.length) {
+
+        for (let i = 0; i < test.length; i++) {
+            if (test[i] !== argObj.result[i]) {
+                return "failure";
+            }
+        }
+
+        totalSuccesses++;
+        return "success";
+
+    } else {
+
+        return "failure";
+
+    }
+
+};
 
 // Test air07
 /*
@@ -316,6 +347,8 @@ testStarter("air02", testAir02, testAir02argArr);
 testStarter("air03", testAir03, testAir03argArr);
 testStarter("air04", testAir04, testAir04argArr);
 testStarter("air05", testAir05, testAir05argArr);
+testStarter("air06", testAir06, testAir06argArr);
+
 
 
 console.log("Total success: ("+ totalSuccesses +"/"+ totalTest +")");
