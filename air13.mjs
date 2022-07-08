@@ -313,7 +313,7 @@ const testAir07argArr = [
         intToAdd : 16,
         result:[7, 12, 16, 21]
     }
-]
+];
 
 const testAir07 = (argObj) => {
 
@@ -339,21 +339,44 @@ const testAir07 = (argObj) => {
 
 };
 
-/*
-console.log("test air07");
-console.log(sortedInsert([1, 3, 4], 2));
-console.log(sortedInsert([10, 20, 30, 40, 50, 60, 70, 90], 33));
-console.log("--------");
-*/
-
-
 // Test air08
-/*
-console.log("test air08");
-console.log(sortedFusion([10, 20, 30], [15, 25, 35]));
-console.log(sortedFusion([4, 6, 8], [5, 7, 9]));
-console.log("--------");
-*/
+
+const testAir08argArr = [
+    {
+        arrayOne:[10, 20, 30],
+        arrayTwo:[15, 25, 35],
+        result:[10, 15, 20, 25, 30, 35]
+    },
+    {
+        arrayOne:[4, 6, 8],
+        arrayTwo:[5, 7, 9],
+        result:[4, 5, 6, 7, 8, 9]
+    }
+];
+
+const testAir08 = (argObj) => {
+
+    totalTest++;
+    const test = sortedFusion(argObj.arrayOne, argObj.arrayTwo);
+
+    if (test.length === argObj.result.length) {
+
+        for (let i = 0; i < test.length; i++) {
+            if (test[i] !== argObj.result[i]) {
+                return "failure";
+            }
+        }
+
+        totalSuccesses++;
+        return "success";
+
+    } else {
+
+        return "failure";
+
+    }
+
+};
 
 // Test air09
 /*
@@ -396,6 +419,6 @@ testStarter("air04", testAir04, testAir04argArr);
 testStarter("air05", testAir05, testAir05argArr);
 testStarter("air06", testAir06, testAir06argArr);
 testStarter("air07", testAir07, testAir07argArr);
-
+testStarter("air08", testAir08, testAir08argArr);
 
 console.log("Total success: ("+ totalSuccesses +"/"+ totalTest +")");
