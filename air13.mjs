@@ -293,12 +293,59 @@ const testAir06 = (argObj) => {
 };
 
 // Test air07
+
+const testAir07argArr = [
+    {
+        array:[1, 3, 4],
+        intToAdd : 2,
+        result:[1, 2, 3, 4]
+    },
+    {
+        array:[10, 20, 30, 40, 50, 60, 70, 90],
+        intToAdd : 33,
+        result:[
+            10, 20, 30, 33, 40,
+            50, 60, 70, 90
+        ]          
+    },
+    {
+        array:[7, 12, 21],
+        intToAdd : 16,
+        result:[7, 12, 16, 21]
+    }
+]
+
+const testAir07 = (argObj) => {
+
+    totalTest++;
+    const test = sortedInsert(argObj.array, argObj.intToAdd);
+
+    if (test.length === argObj.result.length) {
+
+        for (let i = 0; i < test.length; i++) {
+            if (test[i] !== argObj.result[i]) {
+                return "failure";
+            }
+        }
+
+        totalSuccesses++;
+        return "success";
+
+    } else {
+
+        return "failure";
+
+    }
+
+};
+
 /*
 console.log("test air07");
 console.log(sortedInsert([1, 3, 4], 2));
 console.log(sortedInsert([10, 20, 30, 40, 50, 60, 70, 90], 33));
 console.log("--------");
 */
+
 
 // Test air08
 /*
@@ -348,7 +395,7 @@ testStarter("air03", testAir03, testAir03argArr);
 testStarter("air04", testAir04, testAir04argArr);
 testStarter("air05", testAir05, testAir05argArr);
 testStarter("air06", testAir06, testAir06argArr);
-
+testStarter("air07", testAir07, testAir07argArr);
 
 
 console.log("Total success: ("+ totalSuccesses +"/"+ totalTest +")");
