@@ -416,12 +416,54 @@ const testAir09 = (argObj) => {
 };
 
 // Test air10
-/*
-console.log("test air10");
-console.log(getTxtArr("test-air10-1.txt"));
-console.log(getTxtArr("test-air10-2.txt"));
-console.log("--------");
-*/
+const testAir10argArr = [
+    {
+        fileName:"test-air10-1.txt",
+        result:['this is coding accelerator', 'Harry is ze best']
+    },
+    {
+        fileName:"test-air10-2.txt",
+        result:[
+            'Born For One Thing',
+            'Amazonia',
+            'Another World',
+            'Hold On',
+            'New Found',
+            'Fortitude',
+            'The Chant',
+            'Sphinx',
+            'Into The Storm',
+            'The Trails',
+            'Grind'
+        ]
+          
+    }
+];
+
+const testAir10 = (argObj) => {
+
+    totalTest++;
+    const test = getTxtArr(argObj.fileName);
+
+    if (test.length === argObj.result.length) {
+
+        for (let i = 0; i < test.length; i++) {
+            if (test[i] !== argObj.result[i]) {
+                return "failure";
+            }
+        }
+
+        totalSuccesses++;
+        return "success";
+
+    } else {
+
+        return "failure";
+
+    }
+
+};
+
 
 // Test air11
 /*
@@ -450,6 +492,8 @@ testStarter("air06", testAir06, testAir06argArr);
 testStarter("air07", testAir07, testAir07argArr);
 testStarter("air08", testAir08, testAir08argArr);
 testStarter("air09", testAir09, testAir09argArr);
+testStarter("air10", testAir10, testAir10argArr);
 */
+
 
 console.log("Total success: ("+ totalSuccesses +"/"+ totalTest +")");
