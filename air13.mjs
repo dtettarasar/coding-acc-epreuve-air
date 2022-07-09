@@ -379,12 +379,41 @@ const testAir08 = (argObj) => {
 };
 
 // Test air09
-/*
-console.log("test air09");
-console.log(rotateArr(['Michel', 'Albert', 'Thérèse', 'Benoit']));
-console.log(rotateArr(['Rust', 'in', 'Peace']));
-console.log("--------");
-*/
+
+const testAir09argArr = [
+    {
+        array:['Michel', 'Albert', 'Thérèse', 'Benoit'],
+        result:['Albert', 'Thérèse', 'Benoit', 'Michel']
+    },
+    {
+        array:['Rust', 'in', 'Peace'],
+        result:['in', 'Peace', 'Rust']
+    }
+];
+
+const testAir09 = (argObj) => {
+
+    totalTest++;
+    const test = rotateArr(argObj.array);
+
+    if (test.length === argObj.result.length) {
+
+        for (let i = 0; i < test.length; i++) {
+            if (test[i] !== argObj.result[i]) {
+                return "failure";
+            }
+        }
+
+        totalSuccesses++;
+        return "success";
+
+    } else {
+
+        return "failure";
+
+    }
+
+};
 
 // Test air10
 /*
@@ -410,7 +439,7 @@ console.log(quickSortProcess([4,1,8,6,2,9,5,3,0,7]));
 console.log("--------");
 */
 
-
+/*
 testStarter("air00", testAir00, testAir00argArr);
 testStarter("air01", testAir01, testAir01argArr);
 testStarter("air02", testAir02, testAir02argArr);
@@ -420,5 +449,7 @@ testStarter("air05", testAir05, testAir05argArr);
 testStarter("air06", testAir06, testAir06argArr);
 testStarter("air07", testAir07, testAir07argArr);
 testStarter("air08", testAir08, testAir08argArr);
+testStarter("air09", testAir09, testAir09argArr);
+*/
 
 console.log("Total success: ("+ totalSuccesses +"/"+ totalTest +")");
