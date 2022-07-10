@@ -29,7 +29,7 @@ const testStarter = (scriptNum, testFunc, argArr) => {
 
 }
 
-// test functions to use when result value is an array
+
 const testStarterArr = (scriptNum, argArr) => {
 
     for (let i = 0; i < argArr.length; i++) {
@@ -40,6 +40,7 @@ const testStarterArr = (scriptNum, argArr) => {
 
 }
 
+// test functions to use when result value is an array
 const getTestResultArr = (argObj) => {
 
     totalTest++;
@@ -266,31 +267,6 @@ const testAir05argArr = [
     }
 ];
 
-const testAir05 = (argObj) => {
-
-    totalTest++;
-    const test = updateArr(argObj.array, argObj.int);
-
-    if (test.length === argObj.result.length) {
-
-        for (let i = 0; i < test.length; i++) {
-            if (test[i] !== argObj.result[i]) {
-                return "failure";
-            }
-        }
-
-        totalSuccesses++;
-        return "success";
-
-    } else {
-
-        return "failure";
-
-    }
-
-};
-
-
 // Test air06
 const testAir06argArr = [
     {
@@ -306,14 +282,10 @@ const testAir06argArr = [
 // Test air07
 const testAir07argArr = [
     {
-        array:[1, 3, 4],
-        intToAdd : 2,
         test:sortedInsert([1, 3, 4], 2),
         result:[1, 2, 3, 4]
     },
     {
-        array:[10, 20, 30, 40, 50, 60, 70, 90],
-        intToAdd : 33,
         test:sortedInsert([10, 20, 30, 40, 50, 60, 70, 90],33),
         result:[
             10, 20, 30, 33, 40,
@@ -321,8 +293,6 @@ const testAir07argArr = [
         ]          
     },
     {
-        array:[7, 12, 21],
-        intToAdd : 16,
         test:sortedInsert([7, 12, 21], 16),
         result:[7, 12, 16, 21]
     }
