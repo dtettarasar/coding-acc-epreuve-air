@@ -257,13 +257,11 @@ const testAir04 = (argObj) => {
 // Test air05
 const testAir05argArr = [
     {
-        array:[1, 2, 3, 4, 5],
-        int: 2,
+        test:updateArr([1, 2, 3, 4, 5], 2),
         result:[ 3, 4, 5, 6, 7 ]
     },
     {
-        array:[10, 11, 12, 20],
-        int:-5,
+        test:updateArr([10, 11, 12, 20], -5),
         result:[ 5, 6, 7, 15 ]
     }
 ];
@@ -444,6 +442,7 @@ testStarter("air11", testAir11, testAir11argArr);
 testStarter("air12", testAir12, testAir12argArr);
 */
 
+testStarterArr("air05", testAir05argArr);
 testStarterArr("air06", testAir06argArr);
 testStarterArr("air07", testAir07argArr);
 testStarterArr("air08", testAir08argArr);
