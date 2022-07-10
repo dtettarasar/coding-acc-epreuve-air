@@ -294,55 +294,29 @@ const testAir05 = (argObj) => {
 
 
 // Test air06
-
 const testAir06argArr = [
     {
-        array:['Michel', 'Albert', 'Thérèse', 'Benoit'],
-        ctrl:"t",
+        test:strCtrl(['Michel', 'Albert', 'Thérèse', 'Benoit'], "t"),
         result:[ 'Michel' ]
     },
     {
-        array:['Metallica', 'Megadeth', 'Slayer', 'Anthrax', 'Testament'],
-        ctrl:"me",
+        test:strCtrl(['Metallica', 'Megadeth', 'Slayer', 'Anthrax', 'Testament'], "me"),
         result:[ 'Slayer', 'Anthrax' ]
     }
 ];
 
-const testAir06 = (argObj) => {
-
-    totalTest++;
-    const test = strCtrl(argObj.array, argObj.ctrl);
-
-    if (test.length === argObj.result.length) {
-
-        for (let i = 0; i < test.length; i++) {
-            if (test[i] !== argObj.result[i]) {
-                return "failure";
-            }
-        }
-
-        totalSuccesses++;
-        return "success";
-
-    } else {
-
-        return "failure";
-
-    }
-
-};
-
 // Test air07
-
 const testAir07argArr = [
     {
         array:[1, 3, 4],
         intToAdd : 2,
+        test:sortedInsert([1, 3, 4], 2),
         result:[1, 2, 3, 4]
     },
     {
         array:[10, 20, 30, 40, 50, 60, 70, 90],
         intToAdd : 33,
+        test:sortedInsert([10, 20, 30, 40, 50, 60, 70, 90],33),
         result:[
             10, 20, 30, 33, 40,
             50, 60, 70, 90
@@ -351,75 +325,24 @@ const testAir07argArr = [
     {
         array:[7, 12, 21],
         intToAdd : 16,
+        test:sortedInsert([7, 12, 21], 16),
         result:[7, 12, 16, 21]
     }
 ];
 
-const testAir07 = (argObj) => {
-
-    totalTest++;
-    const test = sortedInsert(argObj.array, argObj.intToAdd);
-
-    if (test.length === argObj.result.length) {
-
-        for (let i = 0; i < test.length; i++) {
-            if (test[i] !== argObj.result[i]) {
-                return "failure";
-            }
-        }
-
-        totalSuccesses++;
-        return "success";
-
-    } else {
-
-        return "failure";
-
-    }
-
-};
-
 // Test air08
-
 const testAir08argArr = [
     {
-        arrayOne:[10, 20, 30],
-        arrayTwo:[15, 25, 35],
+        test:sortedFusion([10, 20, 30],[15, 25, 35]),
         result:[10, 15, 20, 25, 30, 35]
     },
     {
-        arrayOne:[4, 6, 8],
-        arrayTwo:[5, 7, 9],
+        test:sortedFusion([4, 6, 8],[5, 7, 9]),
         result:[4, 5, 6, 7, 8, 9]
     }
 ];
 
-const testAir08 = (argObj) => {
-
-    totalTest++;
-    const test = sortedFusion(argObj.arrayOne, argObj.arrayTwo);
-
-    if (test.length === argObj.result.length) {
-
-        for (let i = 0; i < test.length; i++) {
-            if (test[i] !== argObj.result[i]) {
-                return "failure";
-            }
-        }
-
-        totalSuccesses++;
-        return "success";
-
-    } else {
-
-        return "failure";
-
-    }
-
-};
-
 // Test air09
-
 const testAir09argArr = [
     {
         test:rotateArr(['Michel', 'Albert', 'Thérèse', 'Benoit']),
@@ -521,6 +444,9 @@ testStarter("air11", testAir11, testAir11argArr);
 testStarter("air12", testAir12, testAir12argArr);
 */
 
+testStarterArr("air06", testAir06argArr);
+testStarterArr("air07", testAir07argArr);
+testStarterArr("air08", testAir08argArr);
 testStarterArr("air09", testAir09argArr);
 testStarterArr("air10", testAir10argArr);
 testStarterArr("air11", testAir11argArr);
