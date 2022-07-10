@@ -29,6 +29,10 @@ const testStarter = (scriptNum, testFunc, argArr) => {
 
 }
 
+const getTestResult = (argObj, func) => {
+    
+}
+
 // Test air00
 const testAir00 = (argObj) => {
     totalTest++;
@@ -168,10 +172,14 @@ const testAir03 = (argObj) => {
 
     totalTest++;
     const test = getIntruders(argObj.array);
-    const testStr = test.join(',');
-    const resultStr = argObj.result.join(',');
 
-    if (testStr === resultStr) {
+    if (test.length === argObj.result.length) {
+
+        for (let i = 0; i < test.length; i++) {
+            if (test[i] !== argObj.result[i]) {
+                return "failure";
+            }
+        }
 
         totalSuccesses++;
         return "success";
@@ -182,7 +190,7 @@ const testAir03 = (argObj) => {
 
     }
 
-}
+};
 
 // Test air04
 const testAir04argArr = [
@@ -567,6 +575,7 @@ const testAir12 = (argObj) => {
 
 };
 
+
 testStarter("air00", testAir00, testAir00argArr);
 testStarter("air01", testAir01, testAir01argArr);
 testStarter("air02", testAir02, testAir02argArr);
@@ -580,5 +589,6 @@ testStarter("air09", testAir09, testAir09argArr);
 testStarter("air10", testAir10, testAir10argArr);
 testStarter("air11", testAir11, testAir11argArr);
 testStarter("air12", testAir12, testAir12argArr);
+
 
 console.log("Total success: ("+ totalSuccesses +"/"+ totalTest +")");
