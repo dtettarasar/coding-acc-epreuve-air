@@ -29,9 +29,40 @@ const testStarter = (scriptNum, testFunc, argArr) => {
 
 }
 
-const getTestResult = (argObj, func) => {
-    
+// test functions to use when result value is an array
+const testStarterArr = (scriptNum, argArr) => {
+
+    for (let i = 0; i < argArr.length; i++) {
+        const testResult = getTestResultArr(argArr[i]);
+        const testNum = i + 1;
+        console.log(scriptNum + " ("+ testNum +"/" + argArr.length + ") : " + testResult);
+    }
+
 }
+
+const getTestResultArr = (argObj) => {
+
+    totalTest++;
+
+    if (argObj.test.length === argObj.result.length) {
+
+        for (let i = 0; i < argObj.test.length; i++) {
+            if (argObj.test[i] !== argObj.result[i]) {
+                return "failure";
+            }
+        }
+
+        totalSuccesses++;
+        return "success";
+
+    } else {
+
+        return "failure";
+
+    }
+
+}
+
 
 // Test air00
 const testAir00 = (argObj) => {
@@ -167,6 +198,7 @@ const testAir03argArr = [
         result: ['Monsieur']
     }
 ];
+
 
 const testAir03 = (argObj) => {
 
@@ -532,10 +564,10 @@ const testAir11 = (argObj) => {
 };
 
 // Test air12
-
 const testAir12argArr = [
     {
         array:[11,9,39,2,8,87,92,63,74,6,5,69,63,33,30],
+        test:quickSortProcess([11,9,39,2,8,87,92,63,74,6,5,69,63,33,30]),
         result:[
             2,  5,  6,  8,  9, 11,
            30, 33, 39, 63, 63, 69,
@@ -544,6 +576,7 @@ const testAir12argArr = [
     },
     {
         array:[4,1,8,6,2,9,5,3,0,7],
+        test:quickSortProcess([4,1,8,6,2,9,5,3,0,7]),
         result:[
             0, 1, 2, 3, 4,
             5, 6, 7, 8, 9
@@ -551,31 +584,7 @@ const testAir12argArr = [
     }
 ];
 
-const testAir12 = (argObj) => {
-
-    totalTest++;
-    const test = quickSortProcess(argObj.array);
-
-    if (test.length === argObj.result.length) {
-
-        for (let i = 0; i < test.length; i++) {
-            if (test[i] !== argObj.result[i]) {
-                return "failure";
-            }
-        }
-
-        totalSuccesses++;
-        return "success";
-
-    } else {
-
-        return "failure";
-
-    }
-
-};
-
-
+/*
 testStarter("air00", testAir00, testAir00argArr);
 testStarter("air01", testAir01, testAir01argArr);
 testStarter("air02", testAir02, testAir02argArr);
@@ -589,6 +598,9 @@ testStarter("air09", testAir09, testAir09argArr);
 testStarter("air10", testAir10, testAir10argArr);
 testStarter("air11", testAir11, testAir11argArr);
 testStarter("air12", testAir12, testAir12argArr);
+*/
+
+testStarterArr("air12", testAir12argArr);
 
 
 console.log("Total success: ("+ totalSuccesses +"/"+ totalTest +")");
