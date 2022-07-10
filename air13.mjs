@@ -506,11 +506,9 @@ const testAir10 = (argObj) => {
 
 
 // Test air11
-
 const testAir11argArr = [
     {
-        symbol:"o",
-        int:7,
+        test:buildPyramid("o",7),
         result: [
             '      o',
             '     ooo',
@@ -523,8 +521,7 @@ const testAir11argArr = [
           
     },
     {
-        symbol:"!",
-        int:8,
+        test:buildPyramid("!",8),
         result: [
             '       !',
             '      !!!',
@@ -539,34 +536,9 @@ const testAir11argArr = [
     }
 ];
 
-const testAir11 = (argObj) => {
-
-    totalTest++;
-    const test = buildPyramid(argObj.symbol, argObj.int);
-
-    if (test.length === argObj.result.length) {
-
-        for (let i = 0; i < test.length; i++) {
-            if (test[i] !== argObj.result[i]) {
-                return "failure";
-            }
-        }
-
-        totalSuccesses++;
-        return "success";
-
-    } else {
-
-        return "failure";
-
-    }
-
-};
-
 // Test air12
 const testAir12argArr = [
     {
-        array:[11,9,39,2,8,87,92,63,74,6,5,69,63,33,30],
         test:quickSortProcess([11,9,39,2,8,87,92,63,74,6,5,69,63,33,30]),
         result:[
             2,  5,  6,  8,  9, 11,
@@ -575,7 +547,6 @@ const testAir12argArr = [
         ]
     },
     {
-        array:[4,1,8,6,2,9,5,3,0,7],
         test:quickSortProcess([4,1,8,6,2,9,5,3,0,7]),
         result:[
             0, 1, 2, 3, 4,
@@ -600,6 +571,7 @@ testStarter("air11", testAir11, testAir11argArr);
 testStarter("air12", testAir12, testAir12argArr);
 */
 
+testStarterArr("air11", testAir11argArr);
 testStarterArr("air12", testAir12argArr);
 
 
