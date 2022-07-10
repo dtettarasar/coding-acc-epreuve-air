@@ -422,47 +422,23 @@ const testAir08 = (argObj) => {
 
 const testAir09argArr = [
     {
-        array:['Michel', 'Albert', 'Thérèse', 'Benoit'],
+        test:rotateArr(['Michel', 'Albert', 'Thérèse', 'Benoit']),
         result:['Albert', 'Thérèse', 'Benoit', 'Michel']
     },
     {
-        array:['Rust', 'in', 'Peace'],
+        test:rotateArr(['Rust', 'in', 'Peace']),
         result:['in', 'Peace', 'Rust']
     }
 ];
 
-const testAir09 = (argObj) => {
-
-    totalTest++;
-    const test = rotateArr(argObj.array);
-
-    if (test.length === argObj.result.length) {
-
-        for (let i = 0; i < test.length; i++) {
-            if (test[i] !== argObj.result[i]) {
-                return "failure";
-            }
-        }
-
-        totalSuccesses++;
-        return "success";
-
-    } else {
-
-        return "failure";
-
-    }
-
-};
-
 // Test air10
 const testAir10argArr = [
     {
-        fileName:"test-air10-1.txt",
+        test:getTxtArr("test-air10-1.txt"),
         result:['this is coding accelerator', 'Harry is ze best']
     },
     {
-        fileName:"test-air10-2.txt",
+        test:getTxtArr("test-air10-2.txt"),
         result:[
             'Born For One Thing',
             'Amazonia',
@@ -479,31 +455,6 @@ const testAir10argArr = [
           
     }
 ];
-
-const testAir10 = (argObj) => {
-
-    totalTest++;
-    const test = getTxtArr(argObj.fileName);
-
-    if (test.length === argObj.result.length) {
-
-        for (let i = 0; i < test.length; i++) {
-            if (test[i] !== argObj.result[i]) {
-                return "failure";
-            }
-        }
-
-        totalSuccesses++;
-        return "success";
-
-    } else {
-
-        return "failure";
-
-    }
-
-};
-
 
 // Test air11
 const testAir11argArr = [
@@ -532,7 +483,6 @@ const testAir11argArr = [
             ' !!!!!!!!!!!!!',
             '!!!!!!!!!!!!!!!'
         ]
-          
     }
 ];
 
@@ -571,6 +521,8 @@ testStarter("air11", testAir11, testAir11argArr);
 testStarter("air12", testAir12, testAir12argArr);
 */
 
+testStarterArr("air09", testAir09argArr);
+testStarterArr("air10", testAir10argArr);
 testStarterArr("air11", testAir11argArr);
 testStarterArr("air12", testAir12argArr);
 
