@@ -19,6 +19,7 @@ import {quickSortProcess} from "./air12.mjs";
 let totalTest = 0;
 let totalSuccesses = 0;
 
+/*
 const testStarter = (scriptNum, testFunc, argArr) => {
 
     for (let i = 0; i < argArr.length; i++) {
@@ -27,10 +28,10 @@ const testStarter = (scriptNum, testFunc, argArr) => {
         console.log(scriptNum + " ("+ testNum +"/" + argArr.length + ") : " + testResult);
     }
 
-}
+}*/
 
 
-const testStarterArr = (scriptNum, argArr) => {
+const testStarter = (scriptNum, argArr) => {
 
     for (let i = 0; i < argArr.length; i++) {
         const testResult = getTestResultArr(argArr[i]);
@@ -412,14 +413,14 @@ testStarter("air11", testAir11, testAir11argArr);
 testStarter("air12", testAir12, testAir12argArr);
 */
 
-testStarterArr("air05", testAir05argArr);
-testStarterArr("air06", testAir06argArr);
-testStarterArr("air07", testAir07argArr);
-testStarterArr("air08", testAir08argArr);
-testStarterArr("air09", testAir09argArr);
-testStarterArr("air10", testAir10argArr);
-testStarterArr("air11", testAir11argArr);
-testStarterArr("air12", testAir12argArr);
+testStarter("air05", testAir05argArr);
+testStarter("air06", testAir06argArr);
+testStarter("air07", testAir07argArr);
+testStarter("air08", testAir08argArr);
+testStarter("air09", testAir09argArr);
+testStarter("air10", testAir10argArr);
+testStarter("air11", testAir11argArr);
+testStarter("air12", testAir12argArr);
 
 
 console.log("Total success: ("+ totalSuccesses +"/"+ totalTest +")");
