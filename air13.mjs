@@ -19,22 +19,10 @@ import {quickSortProcess} from "./air12.mjs";
 let totalTest = 0;
 let totalSuccesses = 0;
 
-/*
-const testStarter = (scriptNum, testFunc, argArr) => {
-
-    for (let i = 0; i < argArr.length; i++) {
-        const testResult = testFunc(argArr[i]);
-        const testNum = i + 1;
-        console.log(scriptNum + " ("+ testNum +"/" + argArr.length + ") : " + testResult);
-    }
-
-}*/
-
-
 const testStarter = (scriptNum, argArr) => {
 
     for (let i = 0; i < argArr.length; i++) {
-        const testResult = getTestResultArr(argArr[i]);
+        const testResult = getTestResult(argArr[i]);
         const testNum = i + 1;
         console.log(scriptNum + " ("+ testNum +"/" + argArr.length + ") : " + testResult);
     }
@@ -42,26 +30,29 @@ const testStarter = (scriptNum, argArr) => {
 }
 
 // test functions to use when result value is an array
-const getTestResultArr = (argObj) => {
+const getTestResult = (argObj) => {
 
     totalTest++;
 
-    if (argObj.test.length === argObj.result.length) {
+    // If the result to test is an array, check all value in array to validate test
+    if (Array.isArray(argObj.result)) {
+        if (argObj.test.length === argObj.result.length) {
 
-        for (let i = 0; i < argObj.test.length; i++) {
-            if (argObj.test[i] !== argObj.result[i]) {
-                return "failure";
+            for (let i = 0; i < argObj.test.length; i++) {
+                if (argObj.test[i] !== argObj.result[i]) {
+                    return "failure";
+                }
             }
+    
+            totalSuccesses++;
+            return "success";
+    
+        } else {
+    
+            return "failure";
+    
         }
-
-        totalSuccesses++;
-        return "success";
-
-    } else {
-
-        return "failure";
-
-    }
+    }  
 
 }
 
