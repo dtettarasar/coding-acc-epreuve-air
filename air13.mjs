@@ -22,9 +22,11 @@ let totalSuccesses = 0;
 const testStarter = (scriptNum, argArr) => {
 
     for (let i = 0; i < argArr.length; i++) {
+
         const testResult = getTestResult(argArr[i]);
         const testNum = i + 1;
         console.log(scriptNum + " ("+ testNum +"/" + argArr.length + ") : " + testResult);
+
     }
 
 }
@@ -39,9 +41,13 @@ const getTestResult = (argObj) => {
         if (argObj.test.length === argObj.result.length) {
 
             for (let i = 0; i < argObj.test.length; i++) {
+
                 if (argObj.test[i] !== argObj.result[i]) {
+
                     return "failure";
+                    
                 }
+
             }
     
             totalSuccesses++;
@@ -52,6 +58,7 @@ const getTestResult = (argObj) => {
             return "failure";
     
         }
+
     }  else if (typeof argObj.result === "string") {
 
         if (argObj.test === argObj.result) {
@@ -71,43 +78,22 @@ const getTestResult = (argObj) => {
 
 
 // Test air00
-const testAir00 = (argObj) => {
-    totalTest++;
-    const arrGenerated = air00Split(argObj.str);
-    if (arrGenerated.length === argObj.result.length) {
-
-        for (let i = 0; i < arrGenerated.length; i++) {
-            if (arrGenerated[i] !== argObj.result[i]) {
-                return "failure";
-            }
-        }
-
-        totalSuccesses++;
-        return "success";
-
-    } else {
-
-        return "failure";
-
-    }
-}
-
 const testAir00argArr = [
     {
-        str:"Fear Of The Dark",
+        test: air00Split("Fear Of The Dark"),
         result:[ 'Fear', 'Of', 'The', 'Dark' ]
     },
     {
-        str:"Bonjour les gars",
+        test: air00Split("Bonjour les gars"),
         result:[ 'Bonjour', 'les', 'gars' ]
     }
 ]
 
 // Test air01
+// TODO : Change result format : no double dimension array 
 const testAir01argArr = [
     {
-        strToCut: "Crevette magique dans la mer des étoiles",
-        sep: "la",
+        test : air01Split("Crevette magique dans la mer des étoiles", "la"),
         result: [
             [
               'C', 'r', 'e', 'v', 'e',
@@ -125,8 +111,7 @@ const testAir01argArr = [
         ]
     },
     {
-        strToCut: "The Ace Of Spades",
-        sep: "Of",
+        test: air01Split("The Ace Of Spades", "Of"),
         result: [
             [
                 'T', 'h', 'e',
@@ -142,6 +127,7 @@ const testAir01argArr = [
     }
 ]
 
+/*
 const testAir01 = (argObj) => {
 
     totalTest++;
@@ -157,6 +143,7 @@ const testAir01 = (argObj) => {
     }
 
 }
+*/
 
 // Test air02
 const testAir02argArr = [
@@ -173,75 +160,30 @@ const testAir02argArr = [
 // Test air03
 const testAir03argArr = [
     {
-        array: ["1", "2", "3", "4", "5", "4", "3", "2", "1"],
+        test: getIntruders(["1", "2", "3", "4", "5", "4", "3", "2", "1"]),
         result: [ '5' ]
     },
     {
-        array: ['Muse', 'Queens', 'Arctic Monkeys', 'Queens', 'Muse', 'Motörhead'],
+        test: getIntruders(['Muse', 'Queens', 'Arctic Monkeys', 'Queens', 'Muse', 'Motörhead']),
         result: [ 'Arctic Monkeys', 'Motörhead' ]
     },
     {
-        array: ['Bonjour', 'Monsieur', 'Bonjour'],
+        test: getIntruders(['Bonjour', 'Monsieur', 'Bonjour']),
         result: ['Monsieur']
     }
 ];
 
-
-const testAir03 = (argObj) => {
-
-    totalTest++;
-    const test = getIntruders(argObj.array);
-
-    if (test.length === argObj.result.length) {
-
-        for (let i = 0; i < test.length; i++) {
-            if (test[i] !== argObj.result[i]) {
-                return "failure";
-            }
-        }
-
-        totalSuccesses++;
-        return "success";
-
-    } else {
-
-        return "failure";
-
-    }
-
-};
-
 // Test air04
 const testAir04argArr = [
     {
-        str:'Hello milady,   bien ou quoi ??',
         test: removeDuplicateChar('Hello milady,   bien ou quoi ??'),
         result:'Helo milady, bien ou quoi ?'
     },
     {
-        str:'All Out Life !!',
         test: removeDuplicateChar('All Out Life !!'),
         result:'Al Out Life !'
     }
 ];
-
-const testAir04 = (argObj) => {
-
-    totalTest++;
-    const test = removeDuplicateChar(argObj.str);
-    
-    if (test === argObj.result) {
-
-        totalSuccesses++;
-        return "success";
-
-    } else {
-
-        return "failure";
-
-    }
-
-};
 
 // Test air05
 const testAir05argArr = [
@@ -384,23 +326,10 @@ const testAir12argArr = [
     }
 ];
 
-/*
-testStarter("air00", testAir00, testAir00argArr);
-testStarter("air01", testAir01, testAir01argArr);
-testStarter("air02", testAir02, testAir02argArr);
-testStarter("air03", testAir03, testAir03argArr);
-testStarter("air04", testAir04, testAir04argArr);
-testStarter("air05", testAir05, testAir05argArr);
-testStarter("air06", testAir06, testAir06argArr);
-testStarter("air07", testAir07, testAir07argArr);
-testStarter("air08", testAir08, testAir08argArr);
-testStarter("air09", testAir09, testAir09argArr);
-testStarter("air10", testAir10, testAir10argArr);
-testStarter("air11", testAir11, testAir11argArr);
-testStarter("air12", testAir12, testAir12argArr);
-*/
-
+testStarter("air00", testAir00argArr);
+// testStarter("air01", testAir01argArr);
 testStarter("air02", testAir02argArr);
+testStarter("air03", testAir03argArr);
 testStarter("air04", testAir04argArr);
 testStarter("air05", testAir05argArr);
 testStarter("air06", testAir06argArr);
@@ -410,6 +339,4 @@ testStarter("air09", testAir09argArr);
 testStarter("air10", testAir10argArr);
 testStarter("air11", testAir11argArr);
 testStarter("air12", testAir12argArr);
-
-
 console.log("Total success: ("+ totalSuccesses +"/"+ totalTest +")");
