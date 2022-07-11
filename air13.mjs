@@ -215,10 +215,12 @@ const testAir03 = (argObj) => {
 const testAir04argArr = [
     {
         str:'Hello milady,   bien ou quoi ??',
+        test: removeDuplicateChar('Hello milady,   bien ou quoi ??'),
         result:'Helo milady, bien ou quoi ?'
     },
     {
         str:'All Out Life !!',
+        test: removeDuplicateChar('All Out Life !!'),
         result:'Al Out Life !'
     }
 ];
@@ -399,6 +401,7 @@ testStarter("air12", testAir12, testAir12argArr);
 */
 
 testStarter("air02", testAir02argArr);
+testStarter("air04", testAir04argArr);
 testStarter("air05", testAir05argArr);
 testStarter("air06", testAir06argArr);
 testStarter("air07", testAir07argArr);
