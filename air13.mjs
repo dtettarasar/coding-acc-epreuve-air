@@ -52,7 +52,20 @@ const getTestResult = (argObj) => {
             return "failure";
     
         }
-    }  
+    }  else if (typeof argObj.result === "string") {
+
+        if (argObj.test === argObj.result) {
+
+            totalSuccesses++;
+            return "success";
+    
+        } else {
+    
+            return "failure";
+    
+        }
+
+    }
 
 }
 
@@ -148,33 +161,14 @@ const testAir01 = (argObj) => {
 // Test air02
 const testAir02argArr = [
     {
-        array: ["je", "teste", "des", "trucs"],
-        sep: " ",
+        test: concatenation(["je", "teste", "des", "trucs"], " "),
         result: "je teste des trucs"
     },
     {
-        array: ["megadeth", "metallica", "anthrax", "exodus", "testament"],
-        sep: ", ",
+        test: concatenation(["megadeth", "metallica", "anthrax", "exodus", "testament"], ", "),
         result: "megadeth, metallica, anthrax, exodus, testament"
     }
 ];
-
-const testAir02 = (argObj) => {
-    totalTest++;
-    const test = concatenation(argObj.array, argObj.sep);
-
-    if (test === argObj.result) {
-
-        totalSuccesses++;
-        return "success";
-
-    } else {
-
-        return "failure";
-
-    }
-
-}
 
 // Test air03
 const testAir03argArr = [
@@ -404,6 +398,7 @@ testStarter("air11", testAir11, testAir11argArr);
 testStarter("air12", testAir12, testAir12argArr);
 */
 
+testStarter("air02", testAir02argArr);
 testStarter("air05", testAir05argArr);
 testStarter("air06", testAir06argArr);
 testStarter("air07", testAir07argArr);
