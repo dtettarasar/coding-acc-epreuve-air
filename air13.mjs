@@ -90,60 +90,16 @@ const testAir00argArr = [
 ]
 
 // Test air01
-// TODO : Change result format : no double dimension array 
 const testAir01argArr = [
     {
         test : air01Split("Crevette magique dans la mer des étoiles", "la"),
-        result: [
-            [
-              'C', 'r', 'e', 'v', 'e',
-              't', 't', 'e', ' ', 'm',
-              'a', 'g', 'i', 'q', 'u',
-              'e', ' ', 'd', 'a', 'n',
-              's', ' '
-            ],
-            [
-              ' ', 'm', 'e', 'r',
-              ' ', 'd', 'e', 's',
-              ' ', 'é', 't', 'o',
-              'i', 'l', 'e', 's'
-            ]
-        ]
+        result: [ 'Crevette magique dans ', ' mer des étoiles' ]
     },
     {
         test: air01Split("The Ace Of Spades", "Of"),
-        result: [
-            [
-                'T', 'h', 'e',
-                ' ', 'A', 'c',
-                'e', ' '
-            ],
-            [
-                ' ', 'S', 'p',
-                'a', 'd', 'e',
-                's'
-            ]
-        ]
+        result: [ 'The Ace ', ' Spades' ]
     }
 ]
-
-/*
-const testAir01 = (argObj) => {
-
-    totalTest++;
-    const test = air01Split(argObj.strToCut, argObj.sep);
-    const testStr = test.join('');
-    const resultStr = argObj.result.join('');
-
-    if (testStr === resultStr) {
-        totalSuccesses++;
-        return "success";
-    } else {
-        return "failure";
-    }
-
-}
-*/
 
 // Test air02
 const testAir02argArr = [
@@ -326,9 +282,9 @@ const testAir12argArr = [
     }
 ];
 
-/*
+
 testStarter("air00", testAir00argArr);
-// testStarter("air01", testAir01argArr);
+testStarter("air01", testAir01argArr);
 testStarter("air02", testAir02argArr);
 testStarter("air03", testAir03argArr);
 testStarter("air04", testAir04argArr);
@@ -341,4 +297,3 @@ testStarter("air10", testAir10argArr);
 testStarter("air11", testAir11argArr);
 testStarter("air12", testAir12argArr);
 console.log("Total success: ("+ totalSuccesses +"/"+ totalTest +")");
-*/
