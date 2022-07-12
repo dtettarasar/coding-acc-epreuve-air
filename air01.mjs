@@ -110,14 +110,14 @@ const mySplit = (fullStr, separator) => {
 
         const strExtract = getStrExtract(strVal, indexStr, sepInd[i].indStart);
         indexStr = sepInd[i].indEnd + 1;
-        mainArr.push(strExtract);
+        mainArr.push(strExtract.join(''));
 
     }
 
     // check s'il reste des char à récupérer après le dernier séparateur
     if (sepInd[sepInd.length - 1].indEnd < strVal.length -1) {
         const strExtract = getStrExtract(strVal, sepInd[sepInd.length - 1].indEnd + 1, strVal.length);
-        mainArr.push(strExtract);
+        mainArr.push(strExtract.join(''));
     }
 
     return mainArr;
@@ -136,7 +136,7 @@ const main = () => {
         const strSplit = mySplit(fullStr, sepVal);
 
         for (let i = 0; i < strSplit.length; i++) {
-            console.log(strSplit[i].join(''));
+            console.log(strSplit[i]);
         }
 
     }
