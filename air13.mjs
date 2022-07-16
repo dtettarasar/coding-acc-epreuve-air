@@ -104,6 +104,10 @@ const testAir01argArr = [
     {
         test: air01Split("The Ace Of Spades", "Of"),
         result: [ 'The Ace ', ' Spades' ]
+    },
+    {
+        test: air01Split("Peace Sells... but Who's Buying?", "test"),
+        result: [ "Peace Sells... but Who's Buying?" ]
     }
 ]
 
