@@ -25,7 +25,13 @@ const testStarter = (scriptNum, argArr) => {
 
         const testResult = getTestResult(argArr[i]);
         const testNum = i + 1;
-        console.log(scriptNum + " ("+ testNum +"/" + argArr.length + ") : " + testResult);
+
+        const redFont = "\x1b[31m";
+        const greenFont = "\x1b[32m";
+
+        const colorFont = testResult === "success" ? greenFont : redFont;
+
+        console.log(colorFont, scriptNum + " ("+ testNum +"/" + argArr.length + ") : " + testResult);
 
     }
 
@@ -296,4 +302,4 @@ testStarter("air09", testAir09argArr);
 testStarter("air10", testAir10argArr);
 testStarter("air11", testAir11argArr);
 testStarter("air12", testAir12argArr);
-console.log("Total success: ("+ totalSuccesses +"/"+ totalTest +")");
+console.log( "\x1b[37m", "Total success: ("+ totalSuccesses +"/"+ totalTest +")");
