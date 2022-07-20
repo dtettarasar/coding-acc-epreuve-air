@@ -6,7 +6,7 @@ const argTester = () => {
     if (args.length !== 1) {
 
         console.log("Veuillez passer une seule chaîne de caractère en argument");
-        console.log("Exemple : node air00.mjs 'Fear Of The Dark'");
+        console.log("Exemple : node air00.js 'Fear Of The Dark'");
 
         return false;
 
@@ -58,13 +58,4 @@ const main = () => {
 
 }
 
-//Get file name
-const args = process.argv;
-const arr = args[1].split('/');
-
-// Execute main if we launch the script directly in terminal
-if (arr[arr.length - 1] === "air00.mjs") {
-    main();
-}
-
-export {mySplit};
+main();
