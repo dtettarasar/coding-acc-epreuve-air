@@ -1,6 +1,7 @@
 // Split en fonction
 
 //TO DO : gérer l'erreur si le separateur spécifié en argument n'est pas présent dans la str
+// Utiliser try catch pour gérer cette erreur
 
 const argTester = () => {
 
@@ -38,35 +39,6 @@ const arrComparison = (arrOne, arrTwo) => {
         return true;
     }
 }
-
-// Vérifie si la deuxième string est bien présente dans la première
-const strInStr = (fullStr, sampleStr) => {
-
-    const fullStrArr = fullStr.split('');
-    const sampleStrArr = sampleStr.split('');
-
-    for (let i = 0; i < fullStrArr.length;i++) {
-
-        if (fullStrArr[i] === sampleStrArr[0]) {
-
-            const fullStrExtract = [];
-
-            for (let j = 0; j < sampleStrArr.length; j++) {
-
-                fullStrExtract.push(fullStrArr[i + j]);
-
-            }
-
-            return arrComparison(fullStrExtract, sampleStrArr);
-
-        }
-
-    }
-
-}
-
-// console.log(strInStr("test", "t"));
-
 
 // rechercher chaque endroit dans la str où l'on retrouve le séparateur
 const findSepIndexes = (fullStr, sepStr) => {
@@ -129,25 +101,13 @@ const getStrExtract = (str, indStart, indEnd) => {
 // fonction qui va diviser une string en fonction d'un séparateur
 const mySplit = (fullStr, separator) => {
 
-    //vérifier que le séparateur est bien présent dans la fullStr
-    const testSepInStr = strInStr(fullStr, separator);
-    // console.log("test sep in str: " + testSepInStr);
-    
+  
     const strVal = fullStr;
     const sepVal = separator;
-    
-    // console.log("fullStr: ", fullStr);
-    // console.log("separator: ", separator);
     
     const sepInd = findSepIndexes(strVal, sepVal);
     let indexStr = 0;
     const mainArr = [];
-
-    if (!testSepInStr) {
-        mainArr.push(fullStr);
-        return mainArr;
-    }
-
 
     for (let i = 0; i < sepInd.length; i++) {
 
