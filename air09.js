@@ -6,7 +6,7 @@ const argTester = () => {
 
     if (args.length < 2) {
         console.log("Veuillez passer au moins deux arguments.");
-        console.log("Exemple : node air09.mjs Rust in Peace");
+        console.log("Exemple : node air09.js Rust in Peace");
         return false;
     }
 

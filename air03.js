@@ -9,7 +9,7 @@ const argTester = () => {
 
     if (args.length < 3) {
         console.log("Veuillez passer au moins 3 chaînes de caractère en argument");
-        console.log("node air03.mjs 'Muse' 'Queens' 'Arctic Monkeys' 'Queens' 'Muse' 'Motörhead'");
+        console.log("node air03.js 'Muse' 'Queens' 'Arctic Monkeys' 'Queens' 'Muse' 'Motörhead'");
         return false;
     }
 

@@ -5,7 +5,7 @@ const argTester = () => {
     const args = process.argv.slice(2);
     const intPattern = /^[0-9]+$/;
     const data = {};
-    const errorMsg = "Veuillez passer en argument un caractère et un nombre entier positif.\nExemple: node air11.mjs o 5";
+    const errorMsg = "Veuillez passer en argument un caractère et un nombre entier positif.\nExemple: node air11.js o 5";
 
     if (args.length !== 2 || args[0].length !== 1 || !intPattern.test(args[1])) {
         console.log(errorMsg);
