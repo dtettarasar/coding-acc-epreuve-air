@@ -51,8 +51,6 @@ const quickSortPartition = (array, indStartPart, indEndPart) => {
 
     return indPivot;
 
-    console.log(array);
-
 }
 
 const quickSortProcess = (array, indStartProc = 0, indEndProc = null) => {
