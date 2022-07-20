@@ -1,8 +1,5 @@
 // Afficher le contenu
 
-import { createRequire } from 'module';
-const require = createRequire(import.meta.url);
-
 const argTester = () => {
 
     const errorMsg = "Veuillez passer le nom d'un fichier en argument (le fichier doit être dans le même répertoire que le script. Formats lisibles : .txt, .md).\nExemple : node air10.mjs test.txt";
@@ -65,13 +62,4 @@ const main = () => {
 
 }
 
-//Get file name
-const args = process.argv;
-const arr = args[1].split('/');
-
-// Execute main if we launch the script directly in terminal
-if (arr[arr.length - 1] === "air10.mjs") {
-    main();
-}
-
-export {getTxtArr};
+main();
