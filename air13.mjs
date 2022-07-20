@@ -292,7 +292,7 @@ const testAir12argArr = [
     }
 ];
 
-
+/*
 testStarter("air00", testAir00argArr);
 testStarter("air01", testAir01argArr);
 testStarter("air02", testAir02argArr);
@@ -307,3 +307,4 @@ testStarter("air10", testAir10argArr);
 testStarter("air11", testAir11argArr);
 testStarter("air12", testAir12argArr);
 console.log( "\x1b[37m", "Total success: ("+ totalSuccesses +"/"+ totalTest +")");
+*/
