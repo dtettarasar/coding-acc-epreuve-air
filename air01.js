@@ -1,8 +1,5 @@
 // Split en fonction
 
-//TO DO : gérer l'erreur si le separateur spécifié en argument n'est pas présent dans la str
-// Utiliser try catch pour gérer cette erreur
-
 const argTester = () => {
 
     const args = process.argv.slice(2);
