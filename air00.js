@@ -68,4 +68,11 @@ module.exports = function () {
     console.log(mySplit("Fear Of The Dark"));
 }
 
-main();
+if (require.main === module) {
+    console.log('called directly');
+    main();
+} else {
+    console.log('required as a module');
+}
+
+

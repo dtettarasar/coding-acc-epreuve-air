@@ -1,29 +1,5 @@
 // Meta exercice
 
-// Import des fonctions à tester
-
-/*
-import {mySplit as air00Split} from "./air00.mjs";
-import {mySplit as air01Split} from "./air01.mjs";
-import {concatenation} from "./air02.mjs";
-import {getIntruders} from "./air03.mjs";
-import {removeDuplicateChar} from "./air04.mjs";
-import {updateArr} from "./air05.mjs";
-import {strCtrl} from "./air06.mjs";
-import {sortedInsert} from "./air07.mjs";
-import {sortedFusion} from "./air08.mjs";
-import {rotateArr} from "./air09.mjs";
-import {getTxtArr} from "./air10.mjs";
-import {buildPyramid} from "./air11.mjs";
-import {quickSortProcess} from "./air12.mjs";
-*/
-
-module.exports = function () {
-    console.log("hello world")
-  }
-  
-require('./air13.js')(); //require itself and run the exports object
-
 require('./air00.js')();
 
 let totalTest = 0;
