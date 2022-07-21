@@ -58,4 +58,14 @@ const main = () => {
 
 }
 
+/*
+module.exports.test = mySplit("Fear Of The Dark");
+module.exports.result = [ 'Fear', 'Of', 'The', 'Dark' ];
+*/
+
+module.exports = function () {
+    console.log("test air00");
+    console.log(mySplit("Fear Of The Dark"));
+}
+
 main();

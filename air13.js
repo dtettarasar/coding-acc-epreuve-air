@@ -2,6 +2,7 @@
 
 // Import des fonctions à tester
 
+/*
 import {mySplit as air00Split} from "./air00.mjs";
 import {mySplit as air01Split} from "./air01.mjs";
 import {concatenation} from "./air02.mjs";
@@ -15,6 +16,15 @@ import {rotateArr} from "./air09.mjs";
 import {getTxtArr} from "./air10.mjs";
 import {buildPyramid} from "./air11.mjs";
 import {quickSortProcess} from "./air12.mjs";
+*/
+
+module.exports = function () {
+    console.log("hello world")
+  }
+  
+require('./air13.js')(); //require itself and run the exports object
+
+require('./air00.js')();
 
 let totalTest = 0;
 let totalSuccesses = 0;
@@ -82,7 +92,7 @@ const getTestResult = (argObj) => {
 
 }
 
-
+/*
 // Test air00
 const testAir00argArr = [
     {
@@ -291,6 +301,7 @@ const testAir12argArr = [
         ]  
     }
 ];
+*/
 
 /*
 testStarter("air00", testAir00argArr);
