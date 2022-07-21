@@ -63,6 +63,19 @@ module.exports.test = mySplit("Fear Of The Dark");
 module.exports.result = [ 'Fear', 'Of', 'The', 'Dark' ];
 */
 
+const testArgArr = [
+    {
+        test: mySplit("Fear Of The Dark"),
+        result:[ 'Fear', 'Of', 'The', 'Dark' ]
+    },
+    {
+        test: mySplit("Bonjour les gars"),
+        result:[ 'Bonjour', 'les', 'gars' ]
+    }
+]
+
+console.log(testArgArr);
+
 module.exports = function () {
     console.log("test air00");
     console.log(mySplit("Fear Of The Dark"));
