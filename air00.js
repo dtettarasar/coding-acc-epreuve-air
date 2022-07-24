@@ -73,11 +73,12 @@ module.exports = function () {
     return testArgArr;
 }
 
+
 if (require.main === module) {
-    console.log('called directly');
+    // console.log('called directly');
     main();
 } else {
-    console.log('required as a module');
+   // console.log('required as a module');
 }
 
 

@@ -1,8 +1,7 @@
 // Meta exercice
 
 const test00 = require('./air00.js')();
-
-console.log(test00);
+//console.log(test00);
 
 let totalTest = 0;
 let totalSuccesses = 0;
@@ -252,8 +251,7 @@ const testAir11argArr = [
             '       !',
             '      !!!',
             '     !!!!!',
-            '    !!!!!!!',
-            '   !!!!!!!!!',
+            '    !!!!!!!',testStarter("air00", testAir00argArr);
             '  !!!!!!!!!!!',
             ' !!!!!!!!!!!!!',
             '!!!!!!!!!!!!!!!'
@@ -281,6 +279,9 @@ const testAir12argArr = [
 ];
 */
 
+testStarter("air00", test00);
+console.log( "\x1b[37m", "Total success: ("+ totalSuccesses +"/"+ totalTest +")");
+
 /*
 testStarter("air00", testAir00argArr);
 testStarter("air01", testAir01argArr);
@@ -295,5 +296,5 @@ testStarter("air09", testAir09argArr);
 testStarter("air10", testAir10argArr);
 testStarter("air11", testAir11argArr);
 testStarter("air12", testAir12argArr);
-console.log( "\x1b[37m", "Total success: ("+ totalSuccesses +"/"+ totalTest +")");
+
 */
