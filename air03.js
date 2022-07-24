@@ -68,4 +68,29 @@ const main = () => {
 
 }
 
-main();
+// Test air03
+const testArgArr = [
+    {
+        test: getIntruders(["1", "2", "3", "4", "5", "4", "3", "2", "1"]),
+        result: [ '5' ]
+    },
+    {
+        test: getIntruders(['Muse', 'Queens', 'Arctic Monkeys', 'Queens', 'Muse', 'Motörhead']),
+        result: [ 'Arctic Monkeys', 'Motörhead' ]
+    },
+    {
+        test: getIntruders(['Bonjour', 'Monsieur', 'Bonjour']),
+        result: ['Monsieur']
+    }
+];
+
+module.exports = function () {
+    return testArgArr;
+}
+
+if (require.main === module) {
+    // console.log('called directly');
+    main();
+} else {
+   // console.log('required as a module');
+}

@@ -1,14 +1,9 @@
 // Meta exercice
 
 const test00 = require('./air00.js')();
-//console.log(test00);
-
 const test01 = require('./air01.js')();
-//console.log(test01);
-
 const test02 = require('./air02.js')();
-//console.log(test01);
-
+const test03 = require('./air03.js')();
 let totalTest = 0;
 let totalSuccesses = 0;
 
@@ -74,6 +69,12 @@ const getTestResult = (argObj) => {
     }
 
 }
+
+testStarter("air00", test00);
+testStarter("air01", test01);
+testStarter("air02", test02);
+testStarter("air03", test03);
+console.log( "\x1b[37m", "Total success: ("+ totalSuccesses +"/"+ totalTest +")");
 
 /*
 
@@ -258,10 +259,7 @@ const testAir12argArr = [
 ];
 */
 
-testStarter("air00", test00);
-testStarter("air01", test01);
-testStarter("air02", test02);
-console.log( "\x1b[37m", "Total success: ("+ totalSuccesses +"/"+ totalTest +")");
+
 
 /*
 testStarter("air00", testAir00argArr);
