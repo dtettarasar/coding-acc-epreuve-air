@@ -176,4 +176,25 @@ const main = () => {
 
 }
 
-main();
+// Test air01
+const testArgArr = [
+    {
+        test : mySplit("Crevette magique dans la mer des étoiles", "la"),
+        result: [ 'Crevette magique dans ', ' mer des étoiles' ]
+    },
+    {
+        test: mySplit("The Ace Of Spades", "Of"),
+        result: [ 'The Ace ', ' Spades' ]
+    }
+]
+
+module.exports = function () {
+    return testArgArr;
+}
+
+if (require.main === module) {
+    // console.log('called directly');
+    main();
+} else {
+   // console.log('required as a module');
+}

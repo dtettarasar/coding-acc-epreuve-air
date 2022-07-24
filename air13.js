@@ -3,6 +3,9 @@
 const test00 = require('./air00.js')();
 //console.log(test00);
 
+const test01 = require('./air01.js')();
+//console.log(test01);
+
 let totalTest = 0;
 let totalSuccesses = 0;
 
@@ -70,33 +73,6 @@ const getTestResult = (argObj) => {
 }
 
 /*
-// Test air00
-const testAir00argArr = [
-    {
-        test: air00Split("Fear Of The Dark"),
-        result:[ 'Fear', 'Of', 'The', 'Dark' ]
-    },
-    {
-        test: air00Split("Bonjour les gars"),
-        result:[ 'Bonjour', 'les', 'gars' ]
-    }
-]
-
-// Test air01
-const testAir01argArr = [
-    {
-        test : air01Split("Crevette magique dans la mer des étoiles", "la"),
-        result: [ 'Crevette magique dans ', ' mer des étoiles' ]
-    },
-    {
-        test: air01Split("The Ace Of Spades", "Of"),
-        result: [ 'The Ace ', ' Spades' ]
-    },
-    {
-        test: air01Split("Peace Sells... but Who's Buying?", "test"),
-        result: [ "Peace Sells... but Who's Buying?" ]
-    }
-]
 
 // Test air02
 const testAir02argArr = [
@@ -280,6 +256,7 @@ const testAir12argArr = [
 */
 
 testStarter("air00", test00);
+testStarter("air01", test01);
 console.log( "\x1b[37m", "Total success: ("+ totalSuccesses +"/"+ totalTest +")");
 
 /*
