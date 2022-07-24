@@ -84,4 +84,25 @@ const main = () => {
 
 }
 
-main();
+// Test air12
+const testArgArr = [
+    {
+        test:quickSortProcess([11,9,39,2,8,87,92,63,74,6,5,69,63,33,30]),
+        result:[
+            2,  5,  6,  8,  9, 11,
+           30, 33, 39, 63, 63, 69,
+           74, 87, 92
+        ]
+    },
+    {
+        test:quickSortProcess([4,1,8,6,2,9,5,3,0,7]),
+        result:[
+            0, 1, 2, 3, 4,
+            5, 6, 7, 8, 9
+        ]  
+    }
+];
+
+console.log(testArgArr);
+
+// main();

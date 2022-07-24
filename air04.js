@@ -42,4 +42,18 @@ const main = () => {
 
 }
 
-main();
+// Test air04
+const testArgArr = [
+    {
+        test: removeDuplicateChar('Hello milady,   bien ou quoi ??'),
+        result:'Helo milady, bien ou quoi ?'
+    },
+    {
+        test: removeDuplicateChar('All Out Life !!'),
+        result:'Al Out Life !'
+    }
+];
+
+console.log(testArgArr);
+
+//main();

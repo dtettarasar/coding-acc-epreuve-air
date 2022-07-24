@@ -120,4 +120,18 @@ const main = () => {
 
 }
 
-main();
+// Test air08
+const testArgArr = [
+    {
+        test:sortedFusion([10, 20, 30],[15, 25, 35]),
+        result:[10, 15, 20, 25, 30, 35]
+    },
+    {
+        test:sortedFusion([4, 6, 8],[5, 7, 9]),
+        result:[4, 5, 6, 7, 8, 9]
+    }
+];
+
+console.log(testArgArr);
+
+//main();

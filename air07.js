@@ -91,4 +91,25 @@ const main = () => {
 
 }
 
-main();
+// Test air07
+const testArgArr = [
+    {
+        test:sortedInsert([1, 3, 4], 2),
+        result:[1, 2, 3, 4]
+    },
+    {
+        test:sortedInsert([10, 20, 30, 40, 50, 60, 70, 90],33),
+        result:[
+            10, 20, 30, 33, 40,
+            50, 60, 70, 90
+        ]          
+    },
+    {
+        test:sortedInsert([7, 12, 21], 16),
+        result:[7, 12, 16, 21]
+    }
+];
+
+console.log(testArgArr);
+
+//main();

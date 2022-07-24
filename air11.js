@@ -69,4 +69,35 @@ const main = () => {
 
 }
 
-main();
+// Test air11
+const testArgArr = [
+    {
+        test:buildPyramid("o",7),
+        result: [
+            '      o',
+            '     ooo',
+            '    ooooo',
+            '   ooooooo',
+            '  ooooooooo',
+            ' ooooooooooo',
+            'ooooooooooooo'
+        ]
+          
+    },
+    {
+        test:buildPyramid("!",8),
+        result: [
+            '       !',
+            '      !!!',
+            '     !!!!!',
+            '    !!!!!!!',
+            '  !!!!!!!!!!!',
+            ' !!!!!!!!!!!!!',
+            '!!!!!!!!!!!!!!!'
+        ]
+    }
+];
+
+console.log(testArgArr);
+
+// main();

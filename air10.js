@@ -62,4 +62,31 @@ const main = () => {
 
 }
 
-main();
+// Test air10
+const testArgArr = [
+    {
+        test:getTxtArr("test-air10-1.txt"),
+        result:['this is coding accelerator', 'Harry is ze best']
+    },
+    {
+        test:getTxtArr("test-air10-2.txt"),
+        result:[
+            'Born For One Thing',
+            'Amazonia',
+            'Another World',
+            'Hold On',
+            'New Found',
+            'Fortitude',
+            'The Chant',
+            'Sphinx',
+            'Into The Storm',
+            'The Trails',
+            'Grind'
+        ]
+          
+    }
+];
+
+console.log(testArgArr);
+
+// main();

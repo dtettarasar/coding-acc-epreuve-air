@@ -40,4 +40,18 @@ const main = () => {
 
 }
 
-main();
+// Test air09
+const testArgArr = [
+    {
+        test:rotateArr(['Michel', 'Albert', 'Thérèse', 'Benoit']),
+        result:['Albert', 'Thérèse', 'Benoit', 'Michel']
+    },
+    {
+        test:rotateArr(['Rust', 'in', 'Peace']),
+        result:['in', 'Peace', 'Rust']
+    }
+];
+
+console.log(testArgArr);
+
+//main();

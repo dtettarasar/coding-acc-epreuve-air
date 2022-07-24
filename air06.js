@@ -108,4 +108,18 @@ const main = () => {
 
 }
 
-main();
+// Test air06
+const testArgArr = [
+    {
+        test:strCtrl(['Michel', 'Albert', 'Thérèse', 'Benoit'], "t"),
+        result:[ 'Michel' ]
+    },
+    {
+        test:strCtrl(['Metallica', 'Megadeth', 'Slayer', 'Anthrax', 'Testament'], "me"),
+        result:[ 'Slayer', 'Anthrax' ]
+    }
+];
+
+console.log(testArgArr);
+
+//main();

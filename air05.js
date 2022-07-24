@@ -74,4 +74,18 @@ const main = () => {
 
 }
 
-main();
+// Test air05
+const testArgArr = [
+    {
+        test:updateArr([1, 2, 3, 4, 5], 2),
+        result:[ 3, 4, 5, 6, 7 ]
+    },
+    {
+        test:updateArr([10, 11, 12, 20], -5),
+        result:[ 5, 6, 7, 15 ]
+    }
+];
+
+console.log(testArgArr)
+
+//main();
