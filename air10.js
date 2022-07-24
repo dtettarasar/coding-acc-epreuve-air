@@ -87,6 +87,14 @@ const testArgArr = [
     }
 ];
 
-console.log(testArgArr);
+module.exports = function () {
+    return testArgArr;
+}
 
-// main();
+
+if (require.main === module) {
+    // console.log('called directly');
+    main();
+} else {
+   // console.log('required as a module');
+}
