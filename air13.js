@@ -6,6 +6,9 @@ const test00 = require('./air00.js')();
 const test01 = require('./air01.js')();
 //console.log(test01);
 
+const test02 = require('./air02.js')();
+//console.log(test01);
+
 let totalTest = 0;
 let totalSuccesses = 0;
 
@@ -257,6 +260,7 @@ const testAir12argArr = [
 
 testStarter("air00", test00);
 testStarter("air01", test01);
+testStarter("air02", test02);
 console.log( "\x1b[37m", "Total success: ("+ totalSuccesses +"/"+ totalTest +")");
 
 /*

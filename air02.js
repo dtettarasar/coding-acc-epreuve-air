@@ -54,4 +54,25 @@ const main = () => {
 
 }
 
-main();
+// Test air02
+const testArgArr = [
+    {
+        test: concatenation(["je", "teste", "des", "trucs"], " "),
+        result: "je teste des trucs"
+    },
+    {
+        test: concatenation(["megadeth", "metallica", "anthrax", "exodus", "testament"], ", "),
+        result: "megadeth, metallica, anthrax, exodus, testament"
+    }
+];
+
+module.exports = function () {
+    return testArgArr;
+}
+
+if (require.main === module) {
+    // console.log('called directly');
+    main();
+} else {
+   // console.log('required as a module');
+}
