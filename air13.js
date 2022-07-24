@@ -1,6 +1,8 @@
 // Meta exercice
 
-require('./air00.js')();
+const test00 = require('./air00.js')();
+
+console.log(test00);
 
 let totalTest = 0;
 let totalSuccesses = 0;

@@ -58,11 +58,6 @@ const main = () => {
 
 }
 
-/*
-module.exports.test = mySplit("Fear Of The Dark");
-module.exports.result = [ 'Fear', 'Of', 'The', 'Dark' ];
-*/
-
 const testArgArr = [
     {
         test: mySplit("Fear Of The Dark"),
@@ -74,11 +69,8 @@ const testArgArr = [
     }
 ]
 
-console.log(testArgArr);
-
 module.exports = function () {
-    console.log("test air00");
-    console.log(mySplit("Fear Of The Dark"));
+    return testArgArr;
 }
 
 if (require.main === module) {
