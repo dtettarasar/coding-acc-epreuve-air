@@ -18,14 +18,6 @@ const argTester = () => {
     strObj.mainStrValue = args[0];
     strObj.separator = args[1];
 
-    testSepInStr = strInStr(strObj.mainStrValue, strObj.separator);
-
-    if (!testSepInStr) {
-        console.log("Assurez-vous que le séparateur soit bien présent dans la chaîne à découper.");
-
-        return false;
-    }
-
     return strObj;
 }
 
@@ -43,32 +35,6 @@ const arrComparison = (arrOne, arrTwo) => {
 
         return true;
     }
-}
-
-// Vérifie si la deuxième string est bien présente dans la première
-const strInStr = (fullStr, sampleStr) => {
-
-    const fullStrArr = fullStr.split('');
-    const sampleStrArr = sampleStr.split('');
-
-    for (let i = 0; i < fullStrArr.length;i++) {
-
-        if (fullStrArr[i] === sampleStrArr[0]) {
-
-            const fullStrExtract = [];
-
-            for (let j = 0; j < sampleStrArr.length; j++) {
-
-                fullStrExtract.push(fullStrArr[i + j]);
-
-            }
-
-            return arrComparison(fullStrExtract, sampleStrArr);
-
-        }
-
-    }
-
 }
 
 // rechercher chaque endroit dans la str où l'on retrouve le séparateur
@@ -166,11 +132,19 @@ const main = () => {
         const fullStr = strObj.mainStrValue;
         const sepVal = strObj.separator;
 
-        const strSplit = mySplit(fullStr, sepVal);
+        try {
 
-        for (let i = 0; i < strSplit.length; i++) {
-            console.log(strSplit[i]);
+            const strSplit = mySplit(fullStr, sepVal);          
+            for (let i = 0; i < strSplit.length; i++) {
+                console.log(strSplit[i]);
+            }
+
+        } catch {
+
+            console.log("erreur argument");
+
         }
+
 
     }
 
