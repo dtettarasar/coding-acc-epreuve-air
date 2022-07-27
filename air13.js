@@ -83,5 +83,14 @@ const getTestResult = (argObj) => {
 getScriptToTest("air00");
 getScriptToTest("air01");
 getScriptToTest("air02");
-getScriptToTest("air15");
+getScriptToTest("air03");
+getScriptToTest("air04");
+getScriptToTest("air05");
+getScriptToTest("air06");
+getScriptToTest("air07");
+getScriptToTest("air08");
+getScriptToTest("air09");
+getScriptToTest("air10");
+getScriptToTest("air11");
+getScriptToTest("air12");
 console.log( "\x1b[37m", "Total success: ("+ totalSuccesses +"/"+ totalTest +")");
