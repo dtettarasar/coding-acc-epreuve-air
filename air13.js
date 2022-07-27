@@ -3,7 +3,6 @@
 const getScriptToTest = (fileName) => {
 
     const filePath = './' + fileName + '.js';
-    let fileToTest = null;
 
     try {
         testResult = require(filePath)();
